@@ -1,0 +1,87 @@
+# Theme that should be used
+theme = "archie-zola"
+
+# The URL the site will be built for
+base_url = "https://example.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Title of the webpage
+title = "Pau López Oliver"
+
+# Description of the webpage
+description = "I'm Pau, interested in theoretical physics, maths, science communication and computer science. I graduated <b>Physics</b> at <a href='https://www.um.es'>University of Murcia</a>, Spain and I'm currently enrolled at the Master in Advanced Physics at <a href='https://www.uv.es'>University of Valencia</a>. Here, one can find (possibly cool?) stuff I've made. If interested, feel free to look at my CV and/or contact me."
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# Taxonomies, to use tags 
+taxonomies = [
+    {name = "tags", feed = true},
+]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+# Put all your custom variables here
+
+# Enabling LaTeX formulae
+katex_enable = true
+
+# control dark mode: auto | dark | toggle
+mode = "toggle"
+
+# subtitle will show under the title in index page
+# subtitle = "Prueba"
+
+# if set true, will use external CDN resource to load font and js file
+useCDN = false
+
+favicon = "/icon/favicon32.png"
+
+# show in the footer
+copyright = "pau"
+
+# config your Google Analysis ID
+# ga = "XXXX-XXXXX"
+
+# optional: config your i18n entry
+[extra.translations]
+languages = [{name = "en", url = "/"}]
+
+# config multi-language menu and other text
+[[extra.translations.en]]
+show_more = "Read more ⟶"
+previous_page = "← Previous"
+next_page = "Next →"
+posted_on = "on "
+posted_by = "Published by"
+read_time = "minute read"
+all_tags = "All tags"
+menus = [
+    { name = "Home", url = "/", weight = 2 },
+    { name = "All posts", url = "/posts", weight = 2 },
+    { name = "About", url = "/about", weight = 3 },
+    { name = "Tags", url = "/tags", weight = 4 },
+]
+
+# config social icon info in the footer
+[[extra.social]]
+icon = "github"
+name = "GitHub"
+url = "https://github.com/ploliver"
+
+#[[extra.social]]
+#icon = "twitter"
+#name = "Twitter"
+#url = "https://twitter.com/PloMinecraft/"
+
+[[extra.social]]
+icon = "mail"
+name = "mail"
+url = "mailto:pau.l.o@um.es"
+
