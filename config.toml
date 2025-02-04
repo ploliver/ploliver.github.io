@@ -2,7 +2,7 @@
 theme = "archie-zola"
 
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://ploliver.github.io"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -75,10 +75,10 @@ icon = "github"
 name = "GitHub"
 url = "https://github.com/ploliver"
 
-#[[extra.social]]
-#icon = "twitter"
-#name = "Twitter"
-#url = "https://twitter.com/PloMinecraft/"
+[[extra.social]]
+icon = "twitter"
+name = "Twitter"
+url = "https://twitter.com/PloMinecraft/"
 
 [[extra.social]]
 icon = "mail"
