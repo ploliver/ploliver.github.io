@@ -1,6 +1,6 @@
 +++
 title = "Cómo calcular la constante de Planck en casa."
-date = "2024-07-20"
+date = "2023-02-09"
 description = "Solo con una Raspberri Pi y un par de LEDs puedes calcular la constante de Planck con bastante precisión."
 
 [taxonomies]
