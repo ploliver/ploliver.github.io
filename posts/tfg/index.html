@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    
+        <title>
+             Trabajo de Fin de Grado
+            
+        </title>
+
+        
+            <meta property="og:title" content="Trabajo de Fin de Grado" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="Breve resumen de mi trabajo de Fin de Grado." />
+        
+    
+
+    
+        
+            <meta name="description" content="Breve resumen de mi trabajo de Fin de Grado." />
+        
+    
+
+    
+         <link rel="icon" type="image/png" href=&#x2F;icon&#x2F;favicon32.png />
+    
+
+    
+
+    
+
+    
+    
+        <script src=https://ploliver.github.io/js/feather.min.js></script>
+    
+
+
+    
+        <link href=https://ploliver.github.io/css/fonts.css rel="stylesheet" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://ploliver.github.io/css/main.css />
+
+    
+        <link
+            rel="stylesheet"
+            id="darkModeStyle"
+            type="text/css"
+            href=https://ploliver.github.io/css/dark.css
+            
+            
+                disabled
+            
+        />
+    
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+
+
+    
+
+
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main" id="main_title">
+        <a href=https:&#x2F;&#x2F;ploliver.github.io>Pau López Oliver</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;>Home</a>
+        
+            <a href=&#x2F;posts>All posts</a>
+        
+            <a href=&#x2F;about>About</a>
+        
+            <a href=&#x2F;tags>Tags</a>
+        
+
+        
+            |
+
+            
+                <a href=&#x2F;>en</a>
+            
+        
+
+        
+            | <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+            <script src=https://ploliver.github.io/js/themetoggle.js></script>
+        
+    </nav>
+</header>
+
+
+        
+    
+<main>
+    <article>
+        <div class="title">
+            <h1 class="title">Trabajo de Fin de Grado</h1>
+            <div class="meta">
+                
+                    Published by <a href="http:&#x2F;&#x2F;twitter.com&#x2F;" target="_blank">Pau</a>
+                
+                on  2024-07-20
+
+                
+            </div>
+        </div>
+
+        
+
+        <section class="body">
+            <p>El objetivo de este post es explicar la temática de mi <a href="https://ploliver.github.io/posts/tfg/tfg_plo_ndo.pdf">trabajo de fin de grado</a>. En un asola frase, trata de reformular el electromagnetismo clásico en términos puramente geométricos.</p>
+<p><img src="https://ploliver.github.io/posts/tfg/hodge_act2.png" alt="Esquema de la actuación del operadot estrella de Hodge sobre una 1-variedad de un espacio 3 dimensional" /></p>
+<h2 id="la-motivacion">La motivación</h2>
+<p>La intención de este trabajo surgió de intentar reconciliar dos ideas opuestas: que el electromagnetismo es una teoría válida en el régimen de la relatividad especial y que cualquier energía curva el espacio. A lo largo del grado, solo se comenta brevemente que existe una formulación covariente de las ecuaciones de Maxwell, pero no había ningún tipo de mitivación física.</p>
+<p>Leyendo bibliografía, me encontré con textos más propios de física teórica. y el trabajo evolucionó a un corte mucho más matemático, donde el propósito final era hablar de electromagnetismo en espacio-tiempos curvos de la manera más natural posible: formas diferenciales en una variedad \(\mathcal{M}\) lorentziana de 4 dimensiones que describe nuestro espacio tiempo.</p>
+<p>De esta manera, en analogía con el lagrangiano electromagnético clásico, se puede proponer un lagranngiano que dependa de la 1-forma campo \(A = A^{\mu} \mathrm{d}x^{\mu}\), la 4-forma fuente \(J = J^{\mu} \mathrm{d}x^{\mu}\) y la 4-forma Faraday \(2!F = F^{\mu \nu} \mathrm{d}x^{\mu} \wedge \mathrm{d}x^{\nu}\), el cual es
+$$
+\mathcal{L} = - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} - J_{\mu} A^{\mu} \longrightarrow \mathcal{L} = \frac{1}{2} F \wedge \star F - A \wedge \star J.
+$$
+Después, aplicando el principio de mínima acción se llega a <strong>la ecuación de Maxwell</strong>,
+$$
+\mathrm{d} \star F = \star A.
+$$
+Además, las otras ecuaciones de Maxwell clásicas vienen de aplicar la exactitud de la derivada exterion, \(\mathrm{d}^2 = 0\), de manera que
+$$
+\mathrm{d} F = 0.
+$$
+Finalmente, en el trabajo, se demuestra que en un espacio de Minkowski, estas ecuaciones de Maxwell se reducen a las clásicas. Si tuviera que hacer el trabajo otra vez, probablemente le daría otro enfoque ligeramente diferente, pero de todas maneras, creo que merece la pena echarle un vistazo.</p>
+
+        </section>
+
+        
+            <div class="post-tags">
+                <nav class="nav tags">
+                    <ul class="tags">
+                        
+                            <li><a href=https://ploliver.github.io/tags/physics/>physics</a></li>
+                        
+                            <li><a href=https://ploliver.github.io/tags/project/>project</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        
+
+    </article>
+</main>
+
+
+
+        <footer>
+  <div style="display:flex">
+    
+        <a class="soc" href=https:&#x2F;&#x2F;github.com&#x2F;ploliver title=GitHub>
+            <i data-feather=github></i>
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;twitter.com&#x2F;PloMinecraft&#x2F; title=Twitter>
+            <i data-feather=twitter></i>
+        </a>
+    
+        <a class="soc" href=mailto:pau.l.o@um.es title=mail>
+            <i data-feather=mail></i>
+        </a>
+    
+  </div>
+  <div class="footer-info">
+    2025 © pau | theme forked from the <a
+      href="https://github.com/XXXMrG/archie-zola">Archie-Zola Theme</a>
+  </div>
+</footer>
+
+
+<script>
+    feather.replace();
+</script>
+
+
+    </div>
+</body>
+
+</html>

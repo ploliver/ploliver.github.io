@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    
+        <title>
+             Recorriendo toda p&amp;!* Elda
+            
+        </title>
+
+        
+            <meta property="og:title" content="Recorriendo toda p&amp;!* Elda" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="Junto a mi querido amigo Abel, estoy recorriendo todas las calles de nuestro pueblo. ¿Por qué querría nadie recorrer todas las calles de su municipio? No lo se." />
+        
+    
+
+    
+        
+            <meta name="description" content="Junto a mi querido amigo Abel, estoy recorriendo todas las calles de nuestro pueblo. ¿Por qué querría nadie recorrer todas las calles de su municipio? No lo se." />
+        
+    
+
+    
+         <link rel="icon" type="image/png" href=&#x2F;icon&#x2F;favicon32.png />
+    
+
+    
+
+    
+
+    
+    
+        <script src=https://ploliver.github.io/js/feather.min.js></script>
+    
+
+
+    
+        <link href=https://ploliver.github.io/css/fonts.css rel="stylesheet" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://ploliver.github.io/css/main.css />
+
+    
+        <link
+            rel="stylesheet"
+            id="darkModeStyle"
+            type="text/css"
+            href=https://ploliver.github.io/css/dark.css
+            
+            
+                disabled
+            
+        />
+    
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+
+
+    
+
+
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main" id="main_title">
+        <a href=https:&#x2F;&#x2F;ploliver.github.io>Pau López Oliver</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;>Home</a>
+        
+            <a href=&#x2F;posts>All posts</a>
+        
+            <a href=&#x2F;about>About</a>
+        
+            <a href=&#x2F;tags>Tags</a>
+        
+
+        
+            |
+
+            
+                <a href=&#x2F;>en</a>
+            
+        
+
+        
+            | <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+            <script src=https://ploliver.github.io/js/themetoggle.js></script>
+        
+    </nav>
+</header>
+
+
+        
+    
+<main>
+    <article>
+        <div class="title">
+            <h1 class="title">Recorriendo toda p&amp;!* Elda</h1>
+            <div class="meta">
+                
+                    Published by <a href="http:&#x2F;&#x2F;twitter.com&#x2F;" target="_blank">Pau</a>
+                
+                on  2024-07-08
+
+                
+            </div>
+        </div>
+
+        
+
+        <section class="body">
+            <p>Junto a mi querido amigo <a href="https://abeldonate.com/">Abel</a>, estoy recorriendo todas las calles de nuestro pueblo. ¿Por qué querría nadie recorrer todas las calles de su municipio? No lo se. Cada vez que quedamos, hablamos de nuestras vidas mientras intentamos trazar la ruta que maximice el número de calles recorridas por paso dado. Después hacemos un <a href="https://ploliver.github.io/posts/recorriendo-toda-puta-elda/resultingmap.html"><strong>mapa</strong></a> para registrar el proceso.</p>
+<p><a href="https://ploliver.github.io/posts/recorriendo-toda-puta-elda/resultingmap.html"><img src="https://ploliver.github.io/posts/recorriendo-toda-puta-elda/current_progress.png" alt="Progreso a fecha de 9 de julio de 2024" /></a></p>
+<h2 id="las-reglas">Las reglas</h2>
+<p>Las <em>reglas del juego</em> son sencillas. Quedamos siempre en el mismo sitio, y tiramos a andar. Se debe recorrer toda calle, avenida, vía, etc. que esté marcada como tal, esto es, que tenga nombre. Las propiedades privadas no cuentan aunque sean vías, por el momento. Además, se debe recorrer <strong>toda la longitud</strong> de la calle, no solamente tocarla.</p>
+<p>Estas reglas son más permisivas que las del <a href="https://www.youtube.com/watch?v=1c8i5SABqwU">maravilloso vídeo de Tom Murphy VII</a>, donde siempre parte del mismo sitio, va corriendo y más cosas. Recomiendo ver el vídeo, ¡el cual ni yo ni Abel habíamos visto antes de empezar esto!</p>
+<h2 id="metodo">Método</h2>
+<p>Cada vez que quedamos, registramos la caminata con la aplicación <a href="https://www.strava.com/">Strava</a> para <em>trackear</em> nuestra posición por GPS en todo momento. Una vez ha acabado la caminata, descargamos los datos en un ordenador y los introducimos en un script de <code>Python</code> que utiliza la librería <code>OpenStreetMap</code> para generar un archivo <code>html</code> que genera el mapa. Para más detalles, consulta el <a href="https://github.com/abeldonate/walking-trackmap">repositorio de GitHub</a>.</p>
+
+        </section>
+
+        
+            <div class="post-tags">
+                <nav class="nav tags">
+                    <ul class="tags">
+                        
+                            <li><a href=https://ploliver.github.io/tags/misc/>misc</a></li>
+                        
+                            <li><a href=https://ploliver.github.io/tags/project/>project</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        
+
+    </article>
+</main>
+
+
+
+        <footer>
+  <div style="display:flex">
+    
+        <a class="soc" href=https:&#x2F;&#x2F;github.com&#x2F;ploliver title=GitHub>
+            <i data-feather=github></i>
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;twitter.com&#x2F;PloMinecraft&#x2F; title=Twitter>
+            <i data-feather=twitter></i>
+        </a>
+    
+        <a class="soc" href=mailto:pau.l.o@um.es title=mail>
+            <i data-feather=mail></i>
+        </a>
+    
+  </div>
+  <div class="footer-info">
+    2025 © pau | theme forked from the <a
+      href="https://github.com/XXXMrG/archie-zola">Archie-Zola Theme</a>
+  </div>
+</footer>
+
+
+<script>
+    feather.replace();
+</script>
+
+
+    </div>
+</body>
+
+</html>

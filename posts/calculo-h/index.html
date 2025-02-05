@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    
+        <title>
+             Cómo calcular la constante de Planck en casa.
+            
+        </title>
+
+        
+            <meta property="og:title" content="Cómo calcular la constante de Planck en casa." />
+        
+    
+
+    
+        
+            <meta property="og:description" content="Solo con una Raspberri Pi y un par de LEDs puedes calcular la constante de Planck con bastante precisión." />
+        
+    
+
+    
+        
+            <meta name="description" content="Solo con una Raspberri Pi y un par de LEDs puedes calcular la constante de Planck con bastante precisión." />
+        
+    
+
+    
+         <link rel="icon" type="image/png" href=&#x2F;icon&#x2F;favicon32.png />
+    
+
+    
+
+    
+
+    
+    
+        <script src=https://ploliver.github.io/js/feather.min.js></script>
+    
+
+
+    
+        <link href=https://ploliver.github.io/css/fonts.css rel="stylesheet" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://ploliver.github.io/css/main.css />
+
+    
+        <link
+            rel="stylesheet"
+            id="darkModeStyle"
+            type="text/css"
+            href=https://ploliver.github.io/css/dark.css
+            
+            
+                disabled
+            
+        />
+    
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    
+
+
+    
+
+
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main" id="main_title">
+        <a href=https:&#x2F;&#x2F;ploliver.github.io>Pau López Oliver</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;>Home</a>
+        
+            <a href=&#x2F;posts>All posts</a>
+        
+            <a href=&#x2F;about>About</a>
+        
+            <a href=&#x2F;tags>Tags</a>
+        
+
+        
+            |
+
+            
+                <a href=&#x2F;>en</a>
+            
+        
+
+        
+            | <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+            <script src=https://ploliver.github.io/js/themetoggle.js></script>
+        
+    </nav>
+</header>
+
+
+        
+    
+<main>
+    <article>
+        <div class="title">
+            <h1 class="title">Cómo calcular la constante de Planck en casa.</h1>
+            <div class="meta">
+                
+                    Published by <a href="http:&#x2F;&#x2F;twitter.com&#x2F;" target="_blank">Pau</a>
+                
+                on  2023-02-09
+
+                
+            </div>
+        </div>
+
+        
+
+        <section class="body">
+            <p>Planck postuló en 1900 un resultado fundamental de la física cuántica: la energía de la radiación electromagnética está cuantizada y sigue la expresión</p>
+<p>$$
+E_{f} = h \nu
+$$</p>
+<p>dónde \(E_f\) es la energía del fotón, \(h\) es la constante de Planck y \(\nu\) es la frecuencia de la luz.  Sabemos además que un LED consiste de una <em>unión p-n</em>, esto es, la unión de dos materiales semiconductores: uno "p" (positivo) con <em>huecos</em> para electrones y otro "n" (negativo) con exceso de electrones. Esto causa que la corriente eléctrica solo pueda pasar en una dirección, del positivo al negativo. En reposo, los electrones no cruzan la unión p-n, puesto que necesitan una energía mínima para poder cruzarla. En otras palabras, existe una barrera de potencial. Si conectamos el diodo a un potencial eléctrico suficientemente fuerte se sobrepasará esta barrera. Denotaremos este potencial como <em>potencial umbral</em>.</p>
+<p>Los electrones que lleguen al semiconductor positivo llenarán los huecos disponibles. No obstante, estos huecos tienen niveles de energía menores que los electrones. La energía <em>sobrante</em> de los electrones se emite en forma de radiación electromagnética (fotones) y calor. Si sobrepasamos el potencial umbral, más electrones cruzarán (más corriente), pero no cambia la energía liberada por electrón.</p>
+<p>Vamos a asumir que el calor emitido es despreciable, de manera que la energía del fotón emitido por un electrón es íntegramente la energía eléctrica del potencial umbral:
+$$
+E_f = e \mathbb{V}_u,
+$$
+dónde \(e\) es la carga del electrón y \(\mathbb{V}_u\) es la diferencia de potencial mínima entre el cátodo y el ánodo del LED tal que se comienza a emitir luz, es decir, nuestro potencial umbral. Juntando la Ley de Plnak, la ecuación derivada y \(\nu = c / \lambda\), se llega a la expresión
+$$
+\mathbb{V}_u = \frac{hc}{e} \frac{1}{\lambda}
+$$
+Si medimos diferentes valores de \(\mathbb{V}_u\) para distintos valores de \(\lambda\), podemos hacer un ajuste lineal \(V \sim 1/\lambda\), del cual obtendremos una recta con pendiente \(m\), la cual será precisamente la cantidad \(hc /\lambda\). Reorganizando:
+$$
+h = m \frac{e}{c}
+$$</p>
+<h1 id="desarrollo-experimental">Desarrollo experimental</h1>
+<p><img src="https://ploliver.github.io/posts/calculo-h/circuito.png" alt="Esquema del montaje" /></p>
+<p>El desarrollo experimental llevado a cabo es una adaptación del descrito en el laboratorio vitual (vlab.amrita.edu) en un intento de reducir la cantidad de material de laboratorio necesario. En concreto, hemos usado un Arduino UNO, una <em>breadboard</em>, un potenciómetro (o divisor de voltaje) de  10 \(k \Omega\), dos resistencias equivalentes a una resistencia de 67 \(k \Omega\) y un LED RGB de 4 pines. El LED RGB no es más que tres diodos LED; rojo, azul y verde; que comparten cátodo. Para nuestro propósito, usaremos los diodos de diferentes colores de uno en uno. El montaje es tal y como se indica en la figura \ref{fig:montaje}.</p>
+<p><img src="https://ploliver.github.io/posts/calculo-h/experimento.jpeg" alt="Montaje experimental realizado" /></p>
+<p>Vamos a diseccionar que estamos haciendo usando el esquema. En primer lugar, de la salida digital \verb|D11| se sacan 4.9 V. Conectamos esto al divisor de voltaje, el cual divide nuestra corriente elećtrica en dos. Una de ellas la conectaremos a tierra (GND), completando el circuito, y otra a una resistencia conectada en serie a nuestro LED. La función de la resistencia es proteger el LED. Para terminar con la parte principal del circuito, conectamos en cátodo del LED a tierra, completando el circuito.</p>
+<p>De esta manera, al girar el potenciómetro elegimos la diferencia de potencial a la que sometemos al diodo, de manera que podemos parar justo cuando vemos el LED encenderse: este será nuestro potencial umbral.</p>
+<p>Para la segunda parte del circuito, conectamos los <em>pines</em> analógicos \verb|A0| y \verb|A1| del Arduino al ánodo y cátodo del LED, respectivamente. Podemos leer los valores <em>analógicos</em> del voltaje en estos pines. En concreto, la lectura de estos voltajes devuelve un número entero: 0 para 0 V y 1023 para 4.9 V. Esto nos permite usar el mismo arduino como voltímetro, con una precisión de 4.9/1024 V. Programamos el Arduino para medir la diferencia de potencial entre el ánodo y el cátodo del LED, tal y como se puede ver en el código fuente del proyecto.</p>
+<p>Para tomar las medidas, conectamos únicamente uno de los colores del LED. En un ambiente oscuro, giramos el potenciómetro hasta que se comienza a emitir luz y leemos en la pantalla del ordenador la diferencia de potencial medida la placa. Los datos recogidos son los siguientes:</p>
+<h1 id="analisis-de-datos">Análisis de datos</h1>
+<p>Hemos medido el voltaje de encendido de los distintos LEDs de colores y hemos obtenido las longitudes de onda, \(\lambda\) de las especificaciones del fabricante. Los datos exactos pueden ser encontrados en el <a href="https://ploliver.github.io/posts/calculo-h/plo-det2-determinacion_h.pdf">informe completo</a>. Tomaremos como nuestros datos para el ajuste la media aritmética de los valores medidos para cada color. Del ajuste lineal, que podemos ver en la figura, se obtiene una pendiente \(m = (1.2175 \pm 0.0058) \times 10^{-6}\) V m. Usando la expresión del ajuste y los valores bibliográficos de \(e\) y \(c\):</p>
+<p><img src="https://ploliver.github.io/posts/calculo-h/lm.png" alt="Ajusste lineal" /></p>
+<p>$$
+h = (6.506 \pm 0.031) \times 10^{-34} \ J \cdot s
+$$</p>
+<p>Este valor, tiene un error de 1.79% comparado con el valor bibliográfico, \(h = 6.62607015\times10^{-34} \ J \cdot s\).</p>
+<h1 id="conclusiones">Conclusiones</h1>
+<p>En general, se pueden comentar un par de cosas desde el punto de vista de la física recreativa. En primer lugar, a pesar de no necesitar el material de laboratorio especializado que se necesita para hacer el experimento (reostato, multímetro, etc.), no todo el mundo tiene una placa de Arduino. A pesar de esto, adquirir todo lo necesario para reproducir el experimento es relativamente barato y accesible. Además, usar la placa como voltímetro no es más que una aproximación <em>casera</em> con relativamente poca precisión.</p>
+<p>No obstante, el resulado obtenido es satsfactorio y pone de manifiesto el comportamiento cuántico de los electrones y la radiación electromagnética.</p>
+
+        </section>
+
+        
+            <div class="post-tags">
+                <nav class="nav tags">
+                    <ul class="tags">
+                        
+                            <li><a href=https://ploliver.github.io/tags/physics/>physics</a></li>
+                        
+                            <li><a href=https://ploliver.github.io/tags/project/>project</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        
+
+    </article>
+</main>
+
+
+
+        <footer>
+  <div style="display:flex">
+    
+        <a class="soc" href=https:&#x2F;&#x2F;github.com&#x2F;ploliver title=GitHub>
+            <i data-feather=github></i>
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;twitter.com&#x2F;PloMinecraft&#x2F; title=Twitter>
+            <i data-feather=twitter></i>
+        </a>
+    
+        <a class="soc" href=mailto:pau.l.o@um.es title=mail>
+            <i data-feather=mail></i>
+        </a>
+    
+  </div>
+  <div class="footer-info">
+    2025 © pau | theme forked from the <a
+      href="https://github.com/XXXMrG/archie-zola">Archie-Zola Theme</a>
+  </div>
+</footer>
+
+
+<script>
+    feather.replace();
+</script>
+
+
+    </div>
+</body>
+
+</html>

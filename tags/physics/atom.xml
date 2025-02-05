@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Pau López Oliver - physics</title>
+    <subtitle>I&#x27;m Pau, interested in theoretical physics, maths, science communication and computer science. I graduated &lt;b&gt;Physics&lt;&#x2F;b&gt; at &lt;a href=&#x27;https:&#x2F;&#x2F;www.um.es&#x27;&gt;University of Murcia&lt;&#x2F;a&gt;, Spain and I&#x27;m currently enrolled at the Master in Advanced Physics at &lt;a href=&#x27;https:&#x2F;&#x2F;www.uv.es&#x27;&gt;University of Valencia&lt;&#x2F;a&gt;. Here, one can find (possibly cool?) stuff I&#x27;ve made. If interested, feel free to look at my CV and&#x2F;or contact me.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://ploliver.github.io/tags/physics/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ploliver.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    <id>https://ploliver.github.io/tags/physics/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Trabajo de Fin de Grado</title>
+        <published>2024-07-20T00:00:00+00:00</published>
+        <updated>2024-07-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ploliver.github.io/posts/tfg/"/>
+        <id>https://ploliver.github.io/posts/tfg/</id>
+        
+        <content type="html" xml:base="https://ploliver.github.io/posts/tfg/">&lt;p&gt;El objetivo de este post es explicar la temática de mi &lt;a href=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;tfg&#x2F;tfg_plo_ndo.pdf&quot;&gt;trabajo de fin de grado&lt;&#x2F;a&gt;. En un asola frase, trata de reformular el electromagnetismo clásico en términos puramente geométricos.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;tfg&#x2F;hodge_act2.png&quot; alt=&quot;Esquema de la actuación del operadot estrella de Hodge sobre una 1-variedad de un espacio 3 dimensional&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;la-motivacion&quot;&gt;La motivación&lt;&#x2F;h2&gt;
+&lt;p&gt;La intención de este trabajo surgió de intentar reconciliar dos ideas opuestas: que el electromagnetismo es una teoría válida en el régimen de la relatividad especial y que cualquier energía curva el espacio. A lo largo del grado, solo se comenta brevemente que existe una formulación covariente de las ecuaciones de Maxwell, pero no había ningún tipo de mitivación física.&lt;&#x2F;p&gt;
+&lt;p&gt;Leyendo bibliografía, me encontré con textos más propios de física teórica. y el trabajo evolucionó a un corte mucho más matemático, donde el propósito final era hablar de electromagnetismo en espacio-tiempos curvos de la manera más natural posible: formas diferenciales en una variedad \(\mathcal{M}\) lorentziana de 4 dimensiones que describe nuestro espacio tiempo.&lt;&#x2F;p&gt;
+&lt;p&gt;De esta manera, en analogía con el lagrangiano electromagnético clásico, se puede proponer un lagranngiano que dependa de la 1-forma campo \(A = A^{\mu} \mathrm{d}x^{\mu}\), la 4-forma fuente \(J = J^{\mu} \mathrm{d}x^{\mu}\) y la 4-forma Faraday \(2!F = F^{\mu \nu} \mathrm{d}x^{\mu} \wedge \mathrm{d}x^{\nu}\), el cual es
+$$
+\mathcal{L} = - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} - J_{\mu} A^{\mu} \longrightarrow \mathcal{L} = \frac{1}{2} F \wedge \star F - A \wedge \star J.
+$$
+Después, aplicando el principio de mínima acción se llega a &lt;strong&gt;la ecuación de Maxwell&lt;&#x2F;strong&gt;,
+$$
+\mathrm{d} \star F = \star A.
+$$
+Además, las otras ecuaciones de Maxwell clásicas vienen de aplicar la exactitud de la derivada exterion, \(\mathrm{d}^2 = 0\), de manera que
+$$
+\mathrm{d} F = 0.
+$$
+Finalmente, en el trabajo, se demuestra que en un espacio de Minkowski, estas ecuaciones de Maxwell se reducen a las clásicas. Si tuviera que hacer el trabajo otra vez, probablemente le daría otro enfoque ligeramente diferente, pero de todas maneras, creo que merece la pena echarle un vistazo.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Cómo calcular la constante de Planck en casa.</title>
+        <published>2023-02-09T00:00:00+00:00</published>
+        <updated>2023-02-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ploliver.github.io/posts/calculo-h/"/>
+        <id>https://ploliver.github.io/posts/calculo-h/</id>
+        
+        <content type="html" xml:base="https://ploliver.github.io/posts/calculo-h/">&lt;p&gt;Planck postuló en 1900 un resultado fundamental de la física cuántica: la energía de la radiación electromagnética está cuantizada y sigue la expresión&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+E_{f} = h \nu
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;dónde \(E_f\) es la energía del fotón, \(h\) es la constante de Planck y \(\nu\) es la frecuencia de la luz.  Sabemos además que un LED consiste de una &lt;em&gt;unión p-n&lt;&#x2F;em&gt;, esto es, la unión de dos materiales semiconductores: uno &quot;p&quot; (positivo) con &lt;em&gt;huecos&lt;&#x2F;em&gt; para electrones y otro &quot;n&quot; (negativo) con exceso de electrones. Esto causa que la corriente eléctrica solo pueda pasar en una dirección, del positivo al negativo. En reposo, los electrones no cruzan la unión p-n, puesto que necesitan una energía mínima para poder cruzarla. En otras palabras, existe una barrera de potencial. Si conectamos el diodo a un potencial eléctrico suficientemente fuerte se sobrepasará esta barrera. Denotaremos este potencial como &lt;em&gt;potencial umbral&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Los electrones que lleguen al semiconductor positivo llenarán los huecos disponibles. No obstante, estos huecos tienen niveles de energía menores que los electrones. La energía &lt;em&gt;sobrante&lt;&#x2F;em&gt; de los electrones se emite en forma de radiación electromagnética (fotones) y calor. Si sobrepasamos el potencial umbral, más electrones cruzarán (más corriente), pero no cambia la energía liberada por electrón.&lt;&#x2F;p&gt;
+&lt;p&gt;Vamos a asumir que el calor emitido es despreciable, de manera que la energía del fotón emitido por un electrón es íntegramente la energía eléctrica del potencial umbral:
+$$
+E_f = e \mathbb{V}_u,
+$$
+dónde \(e\) es la carga del electrón y \(\mathbb{V}_u\) es la diferencia de potencial mínima entre el cátodo y el ánodo del LED tal que se comienza a emitir luz, es decir, nuestro potencial umbral. Juntando la Ley de Plnak, la ecuación derivada y \(\nu = c &#x2F; \lambda\), se llega a la expresión
+$$
+\mathbb{V}_u = \frac{hc}{e} \frac{1}{\lambda}
+$$
+Si medimos diferentes valores de \(\mathbb{V}_u\) para distintos valores de \(\lambda\), podemos hacer un ajuste lineal \(V \sim 1&#x2F;\lambda\), del cual obtendremos una recta con pendiente \(m\), la cual será precisamente la cantidad \(hc &#x2F;\lambda\). Reorganizando:
+$$
+h = m \frac{e}{c}
+$$&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;desarrollo-experimental&quot;&gt;Desarrollo experimental&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;calculo-h&#x2F;circuito.png&quot; alt=&quot;Esquema del montaje&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;El desarrollo experimental llevado a cabo es una adaptación del descrito en el laboratorio vitual (vlab.amrita.edu) en un intento de reducir la cantidad de material de laboratorio necesario. En concreto, hemos usado un Arduino UNO, una &lt;em&gt;breadboard&lt;&#x2F;em&gt;, un potenciómetro (o divisor de voltaje) de  10 \(k \Omega\), dos resistencias equivalentes a una resistencia de 67 \(k \Omega\) y un LED RGB de 4 pines. El LED RGB no es más que tres diodos LED; rojo, azul y verde; que comparten cátodo. Para nuestro propósito, usaremos los diodos de diferentes colores de uno en uno. El montaje es tal y como se indica en la figura \ref{fig:montaje}.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;calculo-h&#x2F;experimento.jpeg&quot; alt=&quot;Montaje experimental realizado&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Vamos a diseccionar que estamos haciendo usando el esquema. En primer lugar, de la salida digital \verb|D11| se sacan 4.9 V. Conectamos esto al divisor de voltaje, el cual divide nuestra corriente elećtrica en dos. Una de ellas la conectaremos a tierra (GND), completando el circuito, y otra a una resistencia conectada en serie a nuestro LED. La función de la resistencia es proteger el LED. Para terminar con la parte principal del circuito, conectamos en cátodo del LED a tierra, completando el circuito.&lt;&#x2F;p&gt;
+&lt;p&gt;De esta manera, al girar el potenciómetro elegimos la diferencia de potencial a la que sometemos al diodo, de manera que podemos parar justo cuando vemos el LED encenderse: este será nuestro potencial umbral.&lt;&#x2F;p&gt;
+&lt;p&gt;Para la segunda parte del circuito, conectamos los &lt;em&gt;pines&lt;&#x2F;em&gt; analógicos \verb|A0| y \verb|A1| del Arduino al ánodo y cátodo del LED, respectivamente. Podemos leer los valores &lt;em&gt;analógicos&lt;&#x2F;em&gt; del voltaje en estos pines. En concreto, la lectura de estos voltajes devuelve un número entero: 0 para 0 V y 1023 para 4.9 V. Esto nos permite usar el mismo arduino como voltímetro, con una precisión de 4.9&#x2F;1024 V. Programamos el Arduino para medir la diferencia de potencial entre el ánodo y el cátodo del LED, tal y como se puede ver en el código fuente del proyecto.&lt;&#x2F;p&gt;
+&lt;p&gt;Para tomar las medidas, conectamos únicamente uno de los colores del LED. En un ambiente oscuro, giramos el potenciómetro hasta que se comienza a emitir luz y leemos en la pantalla del ordenador la diferencia de potencial medida la placa. Los datos recogidos son los siguientes:&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;analisis-de-datos&quot;&gt;Análisis de datos&lt;&#x2F;h1&gt;
+&lt;p&gt;Hemos medido el voltaje de encendido de los distintos LEDs de colores y hemos obtenido las longitudes de onda, \(\lambda\) de las especificaciones del fabricante. Los datos exactos pueden ser encontrados en el &lt;a href=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;calculo-h&#x2F;plo-det2-determinacion_h.pdf&quot;&gt;informe completo&lt;&#x2F;a&gt;. Tomaremos como nuestros datos para el ajuste la media aritmética de los valores medidos para cada color. Del ajuste lineal, que podemos ver en la figura, se obtiene una pendiente \(m = (1.2175 \pm 0.0058) \times 10^{-6}\) V m. Usando la expresión del ajuste y los valores bibliográficos de \(e\) y \(c\):&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;calculo-h&#x2F;lm.png&quot; alt=&quot;Ajusste lineal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+h = (6.506 \pm 0.031) \times 10^{-34} \ J \cdot s
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;Este valor, tiene un error de 1.79% comparado con el valor bibliográfico, \(h = 6.62607015\times10^{-34} \ J \cdot s\).&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;&#x2F;h1&gt;
+&lt;p&gt;En general, se pueden comentar un par de cosas desde el punto de vista de la física recreativa. En primer lugar, a pesar de no necesitar el material de laboratorio especializado que se necesita para hacer el experimento (reostato, multímetro, etc.), no todo el mundo tiene una placa de Arduino. A pesar de esto, adquirir todo lo necesario para reproducir el experimento es relativamente barato y accesible. Además, usar la placa como voltímetro no es más que una aproximación &lt;em&gt;casera&lt;&#x2F;em&gt; con relativamente poca precisión.&lt;&#x2F;p&gt;
+&lt;p&gt;No obstante, el resulado obtenido es satsfactorio y pone de manifiesto el comportamiento cuántico de los electrones y la radiación electromagnética.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
