@@ -8,6 +8,6 @@ I'm **Pau**, interested in theoretical physics, maths, science communication and
 
 My interests within physics are **gravitation**, **gauge theories** and **mathematical physics**. I also enjoy science communication, not only in theoretical stuff but also about cheap, easy-to-do science experiments to bring people closer to science.
 
-Outside of physics, I like mathematics, have dabbled with cybersecurity and computer science. I also like music, films and spending time with my friends.  
+Outside of physics, I like mathematics, have dabbled with cybersecurity and computer science. I also like music, films and spending time with my friends :).  
 
 ![screenshot light](/imgs/artes_ciencias.jpg)

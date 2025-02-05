@@ -42,12 +42,12 @@
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url('fonts/elite/Elite.eot');
-  src: url('fonts/elite/Elite.eot?#iefix') format('embedded-opentype'),
-       url('fonts/elite/Elite.woff2') format('woff2'),
-       url('fonts/elite/Elite.woff') format('woff'),
-       url('fonts/elite/Elite.ttf') format('truetype'),
-       url('fonts/elite/Elite.svg#Elite') format('svg');
+  src: url('../fonts/elite/Elite.eot');
+  src: url('../fonts/elite/Elite.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/elite/Elite.woff2') format('woff2'),
+       url('../fonts/elite/Elite.woff') format('woff'),
+       url('../fonts/elite/Elite.ttf') format('truetype'),
+       url('../fonts/elite/Elite.svg#Elite') format('svg');
 }
 
 @font-face {
