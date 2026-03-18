@@ -16,7 +16,7 @@ description = "I'm Pau, interested in theoretical physics, maths, science commun
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-# Taxonomies, to use tags 
+# Taxonomies, to use tags
 taxonomies = [
     {name = "tags", feed = true},
 ]
@@ -79,9 +79,3 @@ url = "https://github.com/ploliver"
 icon = "twitter"
 name = "Twitter"
 url = "https://twitter.com/PloMinecraft/"
-
-[[extra.social]]
-icon = "mail"
-name = "mail"
-url = "mailto:pau.l.o@um.es"
-
