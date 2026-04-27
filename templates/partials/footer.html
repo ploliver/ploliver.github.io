@@ -2,13 +2,16 @@
   <div style="display:flex">
     {% for social in config.extra.social %}
         <a class="soc" href={{ social.url }} title={{ social.name }}>
-            <i data-feather={{ social.icon }}></i>
+            {% if social.icon_file %}
+                <img src="/imgs/{{ social.icon_file }}" class="soc-icon" alt="{{ social.name }}">
+            {% else %}
+                <i data-feather={{ social.icon }}></i>
+            {% endif %}
         </a>
     {% endfor %}
   </div>
   <div class="footer-info">
-    {{ now() | date(format="%Y") }} © {{ config.extra.copyright }} | theme forked from the <a
-      href="https://github.com/XXXMrG/archie-zola">Archie-Zola Theme</a>
+    {{ now() | date(format="%Y") }} © {{ config.extra.copyright }}
   </div>
 </footer>
 

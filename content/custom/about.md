@@ -11,3 +11,7 @@ My interests within physics are **gravitation**, **gauge theories** and **mathem
 Outside of physics, I like mathematics, have dabbled with cybersecurity and computer science. I also like music, films and spending time with my friends :).  
 
 ![screenshot light](/imgs/artes_ciencias.jpg)
+
+---
+
+*Built with [Zola](https://www.getzola.org/), theme forked from [Archie-Zola](https://github.com/XXXMrG/archie-zola).*
