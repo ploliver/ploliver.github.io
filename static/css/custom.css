@@ -80,18 +80,30 @@ footer {
     padding-top: 1rem;
 }
 
+/* Dark mode toggle */
+#dark-mode-toggle {
+    border-bottom: 1px solid transparent;
+}
+
+#dark-mode-toggle svg {
+    vertical-align: text-bottom;
+}
+
 /* Consistent page title spacing */
 h1 { margin-top: 1em; }
+h2 { margin-top: 2em; margin-bottom: 0.5em; }
 
-/* KaTeX inline math */
-.katex { font-size: 1.08em; }
-.katex-display .katex { font-size: 1.21em; }
+/* Home page publications */
+.home-pubs {
+    margin: 2em 0;
+}
 
-/* Inline code */
-:not(pre) > code {
-    font-size: 0.92em;
-    background: none;
-    padding: 0;
+.home-pubs h2 {
+    margin-top: 0;
+}
+
+.home-pubs-all {
+    font-weight: normal;
 }
 
 /* Publications */
@@ -135,6 +147,11 @@ h1 { margin-top: 1em; }
 
 .pub-venue {
     font-style: italic;
+    margin-top: 0.15em;
+}
+
+.post-excerpt {
+    color: grey;
     margin-top: 0.15em;
 }
 

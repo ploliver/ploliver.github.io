@@ -16,6 +16,38 @@
                 {% endif %}
             </div>
 
+            {% set pub_data = load_data(path="publications/data.toml", required=false) %}
+            {% if pub_data %}
+            {% set selected_pubs = [] %}
+            {% for pub in pub_data.pubs %}
+                {% if pub.selected %}{% set_global selected_pubs = selected_pubs | concat(with=pub) %}{% endif %}
+            {% endfor %}
+            {% if selected_pubs | length > 0 %}
+            <div class="home-pubs">
+                <h2>Selected Publications <a href="/publications" class="home-pubs-all">(+)</a></h2>
+                <ul class="publications">
+                {% for pub in selected_pubs %}
+                    <li class="pub-item">
+                        <div class="pub-title">
+                            {% if pub.link %}<a href="{{ pub.link }}">{% endif %}{{ pub.title }}{% if pub.link %}</a>{% endif %}
+                        </div>
+                        <div class="pub-meta">{% set author_count = pub.authors | length %}{% for author in pub.authors %}{% if "Pau" in author %}<span class="self">{{ author }}</span>{% else %}{{ author }}{% endif %}{% if not loop.last %}{% if author_count == 2 %} and {% elif loop.index0 == author_count - 2 %} and {% else %}, {% endif %}{% endif %}{% endfor %}{% if pub.journal or pub.year %}
+                            <div class="pub-venue">
+                                {% if pub.journal %}{{ pub.journal }}{% endif %}
+                                {% if pub.year %} ({{ pub.year }}){% endif %}
+                                {% if pub.doi %} <span class="pub-badge">[<a href="https://doi.org/{{ pub.doi }}">DOI</a>]</span>{% endif %}
+                                {% if pub.arxiv_link %} <span class="pub-badge">[<a href="{{ pub.arxiv_link }}">arXiv</a>]</span>{% endif %}
+                            </div>{% endif %}
+                        </div>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            {% endif %}
+
+            <h2>Miscellanea <a href="/posts" class="home-pubs-all">(+)</a></h2>
+
             {%- if paginator %}
                 {%- set show_pages = paginator.pages -%}
             {% else %}
@@ -23,10 +55,23 @@
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
-            {{ post_macros::list_posts(pages=show_pages, extra=config.extra) }}
-        </main>
+            <ul class="publications">
+            {% for page in show_pages %}
+                {% if not page.draft %}
+                <li class="pub-item">
+                    <div class="pub-title">
+                        <a href="{{ page.permalink }}">{{ page.title }}</a>
+                    </div>
+                    <div class="post-excerpt">
+                        {{ page.date | date(format="%Y-%m-%d") }}
+                        {% if page.description %} | {{ page.description }}{% endif %}
+                    </div>
+                </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
 
-        {% if paginator %}
+            {% if paginator %}
             <ul class="pagination">
                 {% if paginator.previous %}
                     <span class="page-item page-prev">

@@ -204,6 +204,7 @@ footer {
 
 /* Publication dark mode overrides */
 .pub-meta { color: #aaa; }
+.post-excerpt { color: #aaa; }
 .pub-meta .self {
     text-decoration-color: var(--darkMaincolor);
 }

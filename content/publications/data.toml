@@ -6,6 +6,7 @@ year = 2026
 doi = "10.1103/9s47-zspb"
 link = "https://arxiv.org/abs/2602.20253"
 arxiv_link = "https://arxiv.org/abs/2602.20253"
+selected = true
 
 [[pubs]]
 title = "Typst: A Modern Typesetting Engine for Science"
@@ -13,3 +14,4 @@ authors = ["Andrey Voynov", "Alberto Corbi", "Pau López-Oliver", "David Gil"]
 journal = "International Journal of Interactive Multimedia and Artificial Intelligence"
 year = 2026
 doi = "10.9781/ijimai.2026.2269"
+selected = false

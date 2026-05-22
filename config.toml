@@ -11,7 +11,7 @@ compile_sass = true
 title = "Pau López Oliver"
 
 # Description of the webpage
-description = "I'm Pau, a phycisist interested the interplay between QFT and geometry. Here, you will find (potentially) cool stuff I have done."
+description = "I am a physicist working on quantum field theory in curved spacetimes. Here, you will find (potentially) cool stuff I have done, both academic and non-academic."
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
