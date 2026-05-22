@@ -1,15 +1,26 @@
-{% macro list_title(pages, tag_name=false) %}
+{% macro list_title(pages, tag_name=false, search_tags=false) %}
     {% if tag_name %}
         <h1>Entries tagged - "{{ term.name }}"</h1>
     {% else %}
         <h1 class="page-title">All articles</h1>
     {% endif %}
 
+    {% if search_tags %}
+    <input type="text" id="post-search" class="post-search" placeholder="Search posts..." autocomplete="off">
+    <div class="tag-chips">
+        <span class="tag-label">Tags:</span>
+        <button class="tag-chip active" data-tag="all">All</button>
+        {% for tag in search_tags %}
+        <button class="tag-chip" data-tag="{{ tag | lower }}">{{ tag }}</button>
+        {% endfor %}
+    </div>
+    {% endif %}
+
     <ul class="posts">
         {% for page in pages %}
-            <li class="post">
+            <li class="post" data-title="{{ page.title | lower }}" data-tags="{% if page.taxonomies.tags %}{{ page.taxonomies.tags | join(sep=",") | lower }}{% endif %}">
                 <a href="{{ page.permalink }}">{{ page.title }}</a>
-                <span class="meta">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                <span class="meta">[{{ page.date | date(format="%Y-%m-%d") }}]</span>
             </li>
         {% endfor %}
     </ul>

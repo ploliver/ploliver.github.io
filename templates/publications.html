@@ -13,21 +13,14 @@
             {{ pub.title }}
             {% if pub.link %}</a>{% endif %}
         </div>
-        <div class="pub-meta">
-            {% set author_count = pub.authors | length %}
-            {% for author in pub.authors %}{% if "Pau" in author %}<span class="self">{{ author }}</span>{% else %}{{ author }}{% endif %}{% if not loop.last %}{% if author_count == 2 %} and {% elif loop.index0 == author_count - 2 %} and {% else %}, {% endif %}{% endif %}{% endfor %}
-            {% if pub.journal or pub.year %}
+        <div class="pub-meta">{% set author_count = pub.authors | length %}{% for author in pub.authors %}{% if "Pau" in author %}<span class="self">{{ author }}</span>{% else %}{{ author }}{% endif %}{% if not loop.last %}{% if author_count == 2 %} and {% elif loop.index0 == author_count - 2 %} and {% else %}, {% endif %}{% endif %}{% endfor %}{% if pub.journal or pub.year %}
             <div class="pub-venue">
                 {% if pub.journal %}{{ pub.journal }}{% endif %}
                 {% if pub.year %} ({{ pub.year }}){% endif %}
-            </div>
-            {% endif %}
+                {% if pub.doi %} <span class="pub-badge">[<a href="https://doi.org/{{ pub.doi }}">DOI</a>]</span>{% endif %}
+                {% if pub.arxiv_link %} <span class="pub-badge">[<a href="{{ pub.arxiv_link }}">arXiv</a>]</span>{% endif %}
+            </div>{% endif %}
         </div>
-        {% if pub.doi %}
-        <div class="pub-doi">
-            DOI: <a href="https://doi.org/{{ pub.doi }}">{{ pub.doi }}</a>
-        </div>
-        {% endif %}
     </li>
 {% endfor %}
 </ul>

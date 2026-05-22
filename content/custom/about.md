@@ -1,17 +1,17 @@
 +++
 title = "About"
-date = "2022-05-12"
+date = "2026-04-28"
 path = "about"
 +++
 
-I'm **Pau**, interested in theoretical physics, maths, science communication and computer science. I graduated **Physics** at [University of Murcia](https://www.um.es), Spain and I'm currently enrolled at the Master in Advanced Physics at [University of Valencia](https://www.uv.es). Here, one can find (possibly cool?) stuff I've made. If interested, feel free to look at my CV and/or contact me.
+I am a theoretical physicist interested in quantum field theory in curved spacetimes and gravitation, currently pursuing a PhD at [U. of Valencia](https://www.uv.es) and [U. of Genoa](https://www.unige.it). 
 
-My interests within physics are **gravitation**, **gauge theories** and **mathematical physics**. I also enjoy science communication, not only in theoretical stuff but also about cheap, easy-to-do science experiments to bring people closer to science.
+The purpose of this page is to serve as a platform for both the academic and non-academic work. While academic work is highly indexed, I have sporadically done _cool stuff_ that I cannot share in any other place, like [inknertia](https://typst.app/universe/package/inknertia/), a Typst library to draw physics diagrams! 
 
-Outside of physics, I like mathematics, have dabbled with cybersecurity and computer science. I also like music, films and spending time with my friends :).  
+I am also quite fond of bringing science closer to the general public, so you might find here a collection of outreach-y physics topics which I never bother sharing with people as a .pdf, but might be cute to send as .html. I have also dabbled with cybersecurity and computer science, so watch out for that. 
+
+As for my background, I graduated from [U. of Murcia](https://www.um.es), Spain—where I met some amazing people—and then got an MSc in Advanced Physics -Astrophysics- at [U. of Valencia](https://www.uv.es). Beyond science, I love listening to [music](https://www.albumoftheyear.org/user/plo/), traveling and spending time with my friends :).  
 
 ![screenshot light](/imgs/artes_ciencias.jpg)
 
----
-
-*Built with [Zola](https://www.getzola.org/), theme forked from [Archie-Zola](https://github.com/XXXMrG/archie-zola).*
+*This website has been built with [Zola](https://www.getzola.org/). The theme is a fork of [Archie-Zola](https://github.com/XXXMrG/archie-zola).*

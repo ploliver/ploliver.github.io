@@ -1,7 +1,7 @@
 +++
-title = "Recorriendo toda p&!* Elda"
+title = "Walking Every F&!*ing Street in Elda"
 date = "2024-07-08"
-description = "Junto a mi querido amigo Abel, estoy recorriendo todas las calles de nuestro pueblo. ¿Por qué querría nadie recorrer todas las calles de su municipio? No lo se."
+description = "Together with my dear friend Abel, I'm walking every street in our town. Why would anyone want to walk every single street in their town? No idea."
 
 [taxonomies]
 tags = ["misc", "project"]
@@ -10,17 +10,19 @@ tags = ["misc", "project"]
 author = { name = "Pau", social= "http://twitter.com/"}
 +++
 
-Junto a mi querido amigo [Abel](https://abeldonate.com/), estoy recorriendo todas las calles de nuestro pueblo. ¿Por qué querría nadie recorrer todas las calles de su municipio? No lo se. Cada vez que quedamos, hablamos de nuestras vidas mientras intentamos trazar la ruta que maximice el número de calles recorridas por paso dado. Después hacemos un [**mapa**](resultingmap.html) para registrar el proceso.  
+Together with my dear friend [Abel](https://abeldonate.com/), I'm walking every street in our town. Why would anyone want to walk every single street in their town? No idea. The thing is, every time we meet up, we talk about our lives while trying to figure out the route that maximizes the number of streets walked per step taken. Afterwards, we make a [**map**](https://github.com/abeldonate/walking-trackmap/blob/main/resultingmap.html) to keep track of our progress. 
 
-[![Progreso a fecha de 9 de julio de 2024](current_progress.png)](resultingmap.html)
+<iframe src="https://raw.githack.com/abeldonate/walking-trackmap/main/resultingmap.html" width="100%" height="500" style="border: 1px solid #ccc; border-radius: 4px; margin: 1em 0;"></iframe>
 
-## Las reglas
 
-Las _reglas del juego_ son sencillas. Quedamos siempre en el mismo sitio, y tiramos a andar. Se debe recorrer toda calle, avenida, vía, etc. que esté marcada como tal, esto es, que tenga nombre. Las propiedades privadas no cuentan aunque sean vías, por el momento. Además, se debe recorrer **toda la longitud** de la calle, no solamente tocarla. 
+## The Rules
 
-Estas reglas son más permisivas que las del [maravilloso vídeo de Tom Murphy VII](https://www.youtube.com/watch?v=1c8i5SABqwU), donde siempre parte del mismo sitio, va corriendo y más cosas. Recomiendo ver el vídeo, ¡el cual ni yo ni Abel habíamos visto antes de empezar esto! 
+The _rules of the game_ are simple. We always meet at the same spot, and we start walking. Every street, avenue, road, etc. must be walked — that is, anything with a name. Private properties don't count even if they have roads, for now. Also, we must walk the **entire length** of the street, not just _touch_ it.
 
-## Método
+These rules are more permissive than those in [Tom Murphy VII's wonderful video](https://www.youtube.com/watch?v=1c8i5SABqwU), where he always starts from the same spot, goes running, and more. Highly recommend the video, which neither Abel nor I had seen before starting this!
 
-Cada vez que quedamos, registramos la caminata con la aplicación [Strava](https://www.strava.com/) para _trackear_ nuestra posición por GPS en todo momento. Una vez ha acabado la caminata, descargamos los datos en un ordenador y los introducimos en un script de `Python` que utiliza la librería `OpenStreetMap` para generar un archivo `html` que genera el mapa. Para más detalles, consulta el [repositorio de GitHub](https://github.com/abeldonate/walking-trackmap). 
+There remains a can of worms unopened: what is the actual extent of Elda (and Petrer)? As it turns out, legally speaking [Elda is actually quite big](https://es.wikipedia.org/wiki/Elda#/map/0) and [Petrer is even bigger](https://es.wikipedia.org/wiki/Petrer#/map/0). Will we ever run the length of our hometown? I honestly do not know, but we will hopefully try our hardest for years to come.   
 
+## Tracking technology
+
+Every time we meet, we track the walk with the [Strava](https://www.strava.com/) app to log our GPS position at all times. Once the walk is done, we download the data onto a computer and feed it into a `Python` script that uses the `OpenStreetMap` library to generate an `html` file that renders the map. For more details, check out the [GitHub repository](https://github.com/abeldonate/walking-trackmap).

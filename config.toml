@@ -22,8 +22,8 @@ taxonomies = [
 ]
 
 [markdown]
-# Use CSS classes for syntax highlighting (allows dark mode theming)
-highlight_theme = "css"
+# Use CSS class-based syntax highlighting for dark mode support
+highlighting = { light_theme = "github-light", dark_theme = "github-dark", style = "class" }
 
 [extra]
 # Put all your custom variables here
@@ -60,10 +60,9 @@ read_time = "minute read"
 all_tags = "All tags"
 menus = [
     { name = "Home", url = "/", weight = 2 },
-    { name = "All posts", url = "/posts", weight = 2 },
+    { name = "Posts", url = "/posts", weight = 2 },
     { name = "About", url = "/about", weight = 3 },
     { name = "Publications", url = "/publications", weight = 4 },
-    { name = "Tags", url = "/tags", weight = 5 },
 ]
 
 # config social icon info in the footer

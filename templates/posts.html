@@ -1,6 +1,66 @@
 {% extends "index.html" %}
 
 {% block main_content %}
-    {% set section = get_section(path="posts/_index.md") %}
-    {{ post_macros::list_title(pages=section.pages) }}
+{% set section = get_section(path="posts/_index.md") %}
+
+{% set all_tags = [] %}
+{% for page in section.pages %}
+    {% if page.taxonomies.tags %}
+        {% for tag in page.taxonomies.tags %}
+            {% if tag not in all_tags %}
+                {% set_global all_tags = all_tags | concat(with=tag) %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+
+{{ post_macros::list_title(pages=section.pages, search_tags=all_tags) }}
+
+<script>
+(function() {
+    var search = document.getElementById('post-search');
+    var chips = document.querySelectorAll('.tag-chip');
+    var posts = document.querySelectorAll('.posts .post');
+    var activeTags = new Set(['all']);
+
+    function filter() {
+        var query = search.value.toLowerCase().trim();
+        var showAll = activeTags.has('all');
+        posts.forEach(function(post) {
+            var title = post.getAttribute('data-title') || '';
+            var tags = post.getAttribute('data-tags') || '';
+            var postTags = new Set(tags.split(',').filter(Boolean));
+            var matchTag = showAll || [...activeTags].some(function(t) { return postTags.has(t); });
+            var matchSearch = !query || title.indexOf(query) !== -1;
+            post.style.display = (matchTag && matchSearch) ? '' : 'none';
+        });
+    }
+
+    search.addEventListener('input', filter);
+
+    chips.forEach(function(chip) {
+        chip.addEventListener('click', function() {
+            var tag = this.getAttribute('data-tag');
+            if (tag === 'all') {
+                activeTags = new Set(['all']);
+            } else {
+                activeTags.delete('all');
+                if (activeTags.has(tag)) {
+                    activeTags.delete(tag);
+                } else {
+                    activeTags.add(tag);
+                }
+                if (activeTags.size === 0) {
+                    activeTags.add('all');
+                }
+            }
+            chips.forEach(function(c) {
+                c.classList.toggle('active', activeTags.has(c.getAttribute('data-tag')));
+            });
+            filter();
+        });
+    });
+})();
+</script>
+
 {% endblock main_content %}
