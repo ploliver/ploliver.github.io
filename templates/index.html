@@ -10,6 +10,10 @@
 
         {% block main_content %}
         <main class="list">
+            <div class="site-banner">
+                <img src="/imgs/banner.jpeg" alt="">
+            </div>
+
             <div class="site-description">
                 {% if config.description %}
                     {{ config.description | markdown | safe }}

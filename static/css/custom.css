@@ -76,8 +76,12 @@
 }
 
 footer {
-    border-top: 3px dotted var(--bordercl);
+    border-top: none;
     padding-top: 1rem;
+}
+
+.footer-info {
+    margin-top: -0.15em;
 }
 
 /* Dark mode toggle */
@@ -89,9 +93,26 @@ footer {
     vertical-align: text-bottom;
 }
 
+/* Banner */
+header {
+    margin-top: 1.5em;
+}
+.site-banner {
+    margin-bottom: 1em;
+}
+
+.site-banner img {
+    width: 100%;
+    display: block;
+}
+
+.site-description p:first-child {
+    margin-top: 0;
+}
+
 /* Consistent page title spacing */
 h1 { margin-top: 1em; }
-h2 { margin-top: 2em; margin-bottom: 0.5em; }
+h2 { margin-top: 2em; margin-bottom: 0.5em; font-weight: bold; }
 
 /* Home page publications */
 .home-pubs {

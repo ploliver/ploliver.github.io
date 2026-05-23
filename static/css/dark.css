@@ -175,31 +175,8 @@ a:hover {
     color: whitesmoke;
 }
 
-/* Footer dark mode */
-footer {
-    border-top: 3px dotted var(--darkMaincolor);
-}
-
-.post-search {
-    border-bottom-color: #555;
-}
-
-.post-search:focus {
-    border-bottom-color: var(--darkMaincolor);
-}
-
-.tag-chip {
-    border-color: transparent;
-}
-
-.tag-chip:hover {
-    text-decoration-color: #555;
-}
-
-.tag-chip.active {
-    text-decoration-color: var(--darkMaincolor);
-    background: transparent;
-    color: inherit;
+img[src*="correus"] {
+    filter: invert(1);
 }
 
 /* Publication dark mode overrides */
