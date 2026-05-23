@@ -3,13 +3,13 @@ function setTheme(mode) {
     if (mode === "dark") {
         document.getElementById("darkModeStyle").disabled=false;
         document.getElementById("gialloDarkStyle").disabled=false;
-        document.getElementById("dark-mode-toggle").innerHTML = "<i data-feather=\"sun\"></i>";
-        feather.replace()
+        document.getElementById("dark-sun").style.display = "";
+        document.getElementById("dark-moon").style.display = "none";
     } else if (mode === "light") {
         document.getElementById("darkModeStyle").disabled=true;
         document.getElementById("gialloDarkStyle").disabled=true;
-        document.getElementById("dark-mode-toggle").innerHTML = "<i data-feather=\"moon\"></i>";
-        feather.replace()
+        document.getElementById("dark-sun").style.display = "none";
+        document.getElementById("dark-moon").style.display = "";
     }
 }
 

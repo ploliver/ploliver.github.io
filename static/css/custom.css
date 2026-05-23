@@ -1,3 +1,13 @@
+/* Smooth dark mode transition */
+/* Smooth dark mode transition */
+body {
+    transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+img {
+    transition: filter 0.12s ease;
+}
+
 /* Posts list */
 .posts {
     margin-left: 2.5em;

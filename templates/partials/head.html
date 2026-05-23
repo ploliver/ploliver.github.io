@@ -9,7 +9,10 @@
         {% endfor %}
 
         {% if config.extra.mode == "toggle" %}
-            | <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+            | <a id="dark-mode-toggle" onclick="toggleTheme();return false" href="#">  
+                <i data-feather="sun" id="dark-sun"></i>
+                <i data-feather="moon" id="dark-moon" style="display:none"></i>
+            </a>
             <script src={{ get_url(path="js/themetoggle.js") }}></script>
         {% endif %}
     </nav>
