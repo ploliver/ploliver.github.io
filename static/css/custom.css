@@ -190,3 +190,34 @@ h2 { margin-top: 2em; margin-bottom: 0.5em; font-weight: bold; }
     font-style: normal;
     font-size: 0.9em;
 }
+
+/* Tag links match regular link styling */
+.tags a {
+    border-bottom: 1px solid var(--maincolor);
+    color: inherit;
+}
+
+.tags a:hover {
+    border-bottom: 3px solid var(--maincolor);
+    color: #000000;
+    background-color: transparent;
+}
+
+/* Post meta (published by, date) in gray */
+.meta {
+    color: grey;
+    margin-top: -0.8em;
+    margin-bottom: 2em;
+}
+
+/* Reset KaTeX to match text colour */
+article span {
+    color: inherit !important;
+}
+
+.katex {
+    font-size: 1.1em;
+}
+.katex-display .katex {
+    font-size: 1.2em;
+}

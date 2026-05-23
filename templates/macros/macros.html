@@ -92,7 +92,7 @@
                 {% if page.extra.author %}
                     {{extra.translations[lang][0].posted_by }} <a href="{{ page.extra.author.social }}" target="_blank">{{ page.extra.author.name }}</a>
                 {% endif %}
-                {{ extra.translations[lang][0].posted_on }} {{ page.date | date(format="%Y-%m-%d") }}
+                {% if page.title == "About" %}last updated{% else %}{{ extra.translations[lang][0].posted_on }}{% endif %} {% if page.title == "About" %}{{ page.date | date(format="%d %B %Y") }}{% else %}{{ page.date | date(format="%Y-%m-%d") }}{% endif %}
 
                 {% if page.draft %}
                     <span class="draft-label">DRAFT</span>
@@ -112,14 +112,11 @@
         </section>
 
         {% if page.taxonomies and page.taxonomies.tags %}
-            <div class="post-tags">
-                <nav class="nav tags">
-                    <ul class="tags">
-                        {% for tag in page.taxonomies.tags %}
-                            <li><a href={{ get_taxonomy_url(kind='tags', name=tag) | safe }}>{{ tag }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </nav>
+            <div class="post-tags tags" style="text-align: left;">
+                <img src="/imgs/manicule.svg" class="soc-icon" style="height:0.6em; display:inline; margin:0; vertical-align: -0.1em;" alt="Tags">&nbsp;
+                {% for tag in page.taxonomies.tags %}
+                    <a href={{ get_taxonomy_url(kind='tags', name=tag) | safe }}>{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
             </div>
         {% endif %}
 

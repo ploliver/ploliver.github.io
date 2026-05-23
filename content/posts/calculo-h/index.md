@@ -1,7 +1,7 @@
 +++
-title = "Cómo calcular la constante de Planck en casa."
+title = "How to calculate Planck's constant at home"
 date = "2023-02-09"
-description = "Solo con una Raspberri Pi y un par de LEDs puedes calcular la constante de Planck con bastante precisión."
+description = "With just a Raspberry Pi and a couple of LEDs you can calculate Planck's constant with decent precision."
 
 [taxonomies]
 tags = ["physics", "project"]
@@ -10,58 +10,58 @@ tags = ["physics", "project"]
 author = { name = "Pau", social= "http://twitter.com/"}
 +++
 
-Planck postuló en 1900 un resultado fundamental de la física cuántica: la energía de la radiación electromagnética está cuantizada y sigue la expresión
+In 1900, Planck postulated a fundamental result of quantum physics: electromagnetic radiation energy is quantised and follows the expression
 
 $$
 E_{f} = h \nu
 $$
 
-dónde \\(E_f\\) es la energía del fotón, \\(h\\) es la constante de Planck y \\(\nu\\) es la frecuencia de la luz.  Sabemos además que un LED consiste de una *unión p-n*, esto es, la unión de dos materiales semiconductores: uno "p" (positivo) con *huecos* para electrones y otro "n" (negativo) con exceso de electrones. Esto causa que la corriente eléctrica solo pueda pasar en una dirección, del positivo al negativo. En reposo, los electrones no cruzan la unión p-n, puesto que necesitan una energía mínima para poder cruzarla. En otras palabras, existe una barrera de potencial. Si conectamos el diodo a un potencial eléctrico suficientemente fuerte se sobrepasará esta barrera. Denotaremos este potencial como *potencial umbral*.
+where \\(E_f\\) is the photon energy, \\(h\\) is Planck's constant, and \\(\nu\\) is the frequency of the light. We also know that an LED consists of a *p-n junction*, i.e., the union of two semiconductor materials: a "p" (positive) one with *holes* for electrons, and an "n" (negative) one with an excess of electrons. This means electric current can only flow in one direction, from positive to negative. At rest, electrons do not cross the p-n junction because they need a minimum energy to do so. In other words, there is a potential barrier. If we connect the diode to a sufficiently strong electric potential, this barrier will be overcome. We will call this potential the *threshold voltage*.
 
-Los electrones que lleguen al semiconductor positivo llenarán los huecos disponibles. No obstante, estos huecos tienen niveles de energía menores que los electrones. La energía *sobrante* de los electrones se emite en forma de radiación electromagnética (fotones) y calor. Si sobrepasamos el potencial umbral, más electrones cruzarán (más corriente), pero no cambia la energía liberada por electrón.
+Electrons reaching the positive semiconductor will fill the available holes. However, these holes have lower energy levels than the electrons. The *surplus* energy of the electrons is emitted as electromagnetic radiation (photons) and heat. If we go above the threshold voltage, more electrons will cross (more current), but the energy released per electron does not change.
 
-Vamos a asumir que el calor emitido es despreciable, de manera que la energía del fotón emitido por un electrón es íntegramente la energía eléctrica del potencial umbral:
+We will assume the emitted heat is negligible, so the energy of the photon emitted by an electron is entirely the electric energy of the threshold voltage:
 $$
 E_f = e \mathbb{V}_u,
 $$
-dónde \\(e\\) es la carga del electrón y \\(\mathbb{V}_u\\) es la diferencia de potencial mínima entre el cátodo y el ánodo del LED tal que se comienza a emitir luz, es decir, nuestro potencial umbral. Juntando la Ley de Plnak, la ecuación derivada y \\(\nu = c / \lambda\\), se llega a la expresión
+where \\(e\\) is the electron charge and \\(\mathbb{V}_u\\) is the minimum potential difference between the LED's cathode and anode at which light begins to be emitted — our threshold voltage. Combining Planck's law, the derived equation, and \\(\nu = c / \lambda\\), we arrive at
 $$
 \mathbb{V}_u = \frac{hc}{e} \frac{1}{\lambda}
 $$
-Si medimos diferentes valores de \\(\mathbb{V}_u\\) para distintos valores de \\(\lambda\\), podemos hacer un ajuste lineal \\(V \sim 1/\lambda\\), del cual obtendremos una recta con pendiente \\(m\\), la cual será precisamente la cantidad \\(hc /\lambda\\). Reorganizando:
+If we measure different values of \\(\mathbb{V}_u\\) for different values of \\(\lambda\\), we can do a linear fit \\(V \sim 1/\lambda\\), from which we obtain a line with slope \\(m\\), which is precisely the quantity \\(hc / e\\). Rearranging:
 $$
 h = m \frac{e}{c}
 $$
-# Desarrollo experimental
+# Experimental setup
 
-![Esquema del montaje](circuito.png)
+![Circuit diagram](circuito.png)
 
-El desarrollo experimental llevado a cabo es una adaptación del descrito en el laboratorio vitual (vlab.amrita.edu) en un intento de reducir la cantidad de material de laboratorio necesario. En concreto, hemos usado un Arduino UNO, una *breadboard*, un potenciómetro (o divisor de voltaje) de  10 \\(k \Omega\\), dos resistencias equivalentes a una resistencia de 67 \\(k \Omega\\) y un LED RGB de 4 pines. El LED RGB no es más que tres diodos LED; rojo, azul y verde; que comparten cátodo. Para nuestro propósito, usaremos los diodos de diferentes colores de uno en uno. El montaje es tal y como se indica en la figura \ref{fig:montaje}.
+The experimental setup carried out is an adaptation of the one described in the virtual lab (vlab.amrita.edu) in an attempt to reduce the amount of lab equipment needed. Specifically, we used an Arduino UNO, a *breadboard*, a 10 \\(k \Omega\\) potentiometer (or voltage divider), two resistors equivalent to a 67 \\(k \Omega\\) resistor, and a 4-pin RGB LED. The RGB LED is nothing more than three LED diodes — red, blue, and green — sharing a cathode. For our purposes, we will use the different-coloured diodes one at a time. The setup is as shown in the figure.
 
-![Montaje experimental realizado](experimento.jpeg)
+![Experimental setup](experimento.jpeg)
 
-Vamos a diseccionar que estamos haciendo usando el esquema. En primer lugar, de la salida digital \verb|D11| se sacan 4.9 V. Conectamos esto al divisor de voltaje, el cual divide nuestra corriente elećtrica en dos. Una de ellas la conectaremos a tierra (GND), completando el circuito, y otra a una resistencia conectada en serie a nuestro LED. La función de la resistencia es proteger el LED. Para terminar con la parte principal del circuito, conectamos en cátodo del LED a tierra, completando el circuito. 
+Let us dissect what we are doing using the diagram. First, the digital output \verb|D11| supplies 4.9 V. We connect this to the voltage divider, which splits our electric current in two. One of them we connect to ground (GND), completing the circuit, and the other to a resistor connected in series to our LED. The purpose of the resistor is to protect the LED. To finish the main part of the circuit, we connect the LED's cathode to ground, completing the circuit.
 
-De esta manera, al girar el potenciómetro elegimos la diferencia de potencial a la que sometemos al diodo, de manera que podemos parar justo cuando vemos el LED encenderse: este será nuestro potencial umbral.
+In this way, by turning the potentiometer we choose the potential difference to which we subject the diode, so we can stop right when we see the LED turn on: this will be our threshold voltage.
 
-Para la segunda parte del circuito, conectamos los *pines* analógicos \verb|A0| y \verb|A1| del Arduino al ánodo y cátodo del LED, respectivamente. Podemos leer los valores *analógicos* del voltaje en estos pines. En concreto, la lectura de estos voltajes devuelve un número entero: 0 para 0 V y 1023 para 4.9 V. Esto nos permite usar el mismo arduino como voltímetro, con una precisión de 4.9/1024 V. Programamos el Arduino para medir la diferencia de potencial entre el ánodo y el cátodo del LED, tal y como se puede ver en el código fuente del proyecto. 
+For the second part of the circuit, we connect the Arduino's analog pins \verb|A0| and \verb|A1| to the LED's anode and cathode, respectively. We can read the *analog* voltage values on these pins. Specifically, reading these voltages returns an integer: 0 for 0 V and 1023 for 4.9 V. This allows us to use the same Arduino as a voltmeter, with a precision of 4.9/1024 V. We program the Arduino to measure the potential difference between the LED's anode and cathode, as can be seen in the project's source code.
 
-Para tomar las medidas, conectamos únicamente uno de los colores del LED. En un ambiente oscuro, giramos el potenciómetro hasta que se comienza a emitir luz y leemos en la pantalla del ordenador la diferencia de potencial medida la placa. Los datos recogidos son los siguientes:
+To take measurements, we connect only one of the LED colours. In a dark environment, we turn the potentiometer until light starts to be emitted and we read the potential difference measured by the board on the computer screen. The collected data are as follows:
 
-# Análisis de datos 
+# Data analysis
 
-Hemos medido el voltaje de encendido de los distintos LEDs de colores y hemos obtenido las longitudes de onda, \\(\lambda\\) de las especificaciones del fabricante. Los datos exactos pueden ser encontrados en el [informe completo](plo-det2-determinacion_h.pdf). Tomaremos como nuestros datos para el ajuste la media aritmética de los valores medidos para cada color. Del ajuste lineal, que podemos ver en la figura, se obtiene una pendiente \\(m = (1.2175 \pm 0.0058) \times 10^{-6}\\) V m. Usando la expresión del ajuste y los valores bibliográficos de \\(e\\) y \\(c\\):
+We measured the turn-on voltage of the different coloured LEDs and obtained the wavelengths, \\(\lambda\\), from the manufacturer's specifications. The exact data can be found in the [full report](plo-det2-determinacion_h.pdf). We will take the arithmetic mean of the measured values for each colour as our data for the fit. From the linear fit, which we can see in the figure, we obtain a slope \\(m = (1.2175 \pm 0.0058) \times 10^{-6}\\) V m. Using the fit expression and the reference values of \\(e\\) and \\(c\\):
 
-![Ajusste lineal](lm.png)
+![Linear fit](lm.png)
 
 $$
 h = (6.506 \pm 0.031) \times 10^{-34} \ J \cdot s
 $$
 
-Este valor, tiene un error de 1.79\% comparado con el valor bibliográfico, \\(h = 6.62607015\times10^{-34} \ J \cdot s\\).
+This value has an error of 1.79\% compared with the reference value, \\(h = 6.62607015\times10^{-34} \ J \cdot s\\).
 
-# Conclusiones
+# Conclusions
 
-En general, se pueden comentar un par de cosas desde el punto de vista de la física recreativa. En primer lugar, a pesar de no necesitar el material de laboratorio especializado que se necesita para hacer el experimento (reostato, multímetro, etc.), no todo el mundo tiene una placa de Arduino. A pesar de esto, adquirir todo lo necesario para reproducir el experimento es relativamente barato y accesible. Además, usar la placa como voltímetro no es más que una aproximación *casera* con relativamente poca precisión. 
+Overall, a couple of things can be noted from a recreational physics standpoint. Firstly, despite not needing the specialised lab equipment required for the experiment (rheostat, multimeter, etc.), not everyone has an Arduino board. Nonetheless, acquiring everything needed to reproduce the experiment is relatively cheap and accessible. Furthermore, using the board as a voltmeter is merely a *homemade* approximation with fairly low precision.
 
-No obstante, el resulado obtenido es satsfactorio y pone de manifiesto el comportamiento cuántico de los electrones y la radiación electromagnética.
+Nevertheless, the result obtained is satisfactory and showcases the quantum behaviour of electrons and electromagnetic radiation.

@@ -1,5 +1,5 @@
 +++
-title = "Poster contribution for EREP 2026"
+title = "Poster for EREP 2026"
 date = "2026-05-23"
 description = "Poster contribution for the Spanish-Portuguese Relativity Meetings, EREP, 2026"
 
