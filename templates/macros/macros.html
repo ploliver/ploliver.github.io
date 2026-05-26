@@ -20,7 +20,7 @@
         {% for page in pages %}
             <li class="post" data-title="{{ page.title | lower }}" data-tags="{% if page.taxonomies.tags %}{{ page.taxonomies.tags | join(sep=",") | lower }}{% endif %}">
                 <a href="{{ page.permalink }}">{{ page.title }}</a>
-                <span class="meta">[{{ page.date | date(format="%Y-%m-%d") }}]</span>
+                <span class="meta">{% if page.extra.journal %}[{{ page.extra.journal }}, {{ page.date | date(format="%b, %Y") }}]{% else %}[{{ page.date | date(format="%Y-%m-%d") }}]{% endif %}</span>
             </li>
         {% endfor %}
     </ul>
@@ -92,7 +92,7 @@
                 {% if page.extra.author %}
                     {{extra.translations[lang][0].posted_by }} <a href="{{ page.extra.author.social }}" target="_blank">{{ page.extra.author.name }}</a>
                 {% endif %}
-                {% if page.title == "About" %}last updated{% else %}{{ extra.translations[lang][0].posted_on }}{% endif %} {% if page.title == "About" %}{{ page.date | date(format="%d %B %Y") }}{% else %}{{ page.date | date(format="%Y-%m-%d") }}{% endif %}
+                {% if page.title == "About" %}last updated{% else %}{{ extra.translations[lang][0].posted_on }}{% endif %} {% if page.title == "About" %}{{ page.date | date(format="%d %B %Y") }}{% elif page.extra.journal %}{{ page.extra.journal }}, {{ page.date | date(format="%b, %Y") }}{% else %}{{ page.date | date(format="%Y-%m-%d") }}{% endif %}
 
                 {% if page.draft %}
                     <span class="draft-label">DRAFT</span>

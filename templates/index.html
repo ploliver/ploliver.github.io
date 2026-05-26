@@ -37,8 +37,7 @@
                         </div>
                         <div class="pub-meta">{% set author_count = pub.authors | length %}{% for author in pub.authors %}{% if "Pau" in author %}<span class="self">{{ author }}</span>{% else %}{{ author }}{% endif %}{% if not loop.last %}{% if author_count == 2 %} and {% elif loop.index0 == author_count - 2 %} and {% else %}, {% endif %}{% endif %}{% endfor %}{% if pub.journal or pub.year %}
                             <div class="pub-venue">
-                                {% if pub.journal %}{{ pub.journal }}{% endif %}
-                                {% if pub.year %} ({{ pub.year }}){% endif %}
+                                {% if pub.journal %}{{ pub.journal }}{% endif %}{% if pub.month and pub.year %}, {{ pub.month }}, {{ pub.year }}{% elif pub.year %}, {{ pub.year }}{% endif %}
                                 {% if pub.doi %} <span class="pub-badge">[<a href="https://doi.org/{{ pub.doi }}">DOI</a>]</span>{% endif %}
                                 {% if pub.arxiv_link %} <span class="pub-badge">[<a href="{{ pub.arxiv_link }}">arXiv</a>]</span>{% endif %}
                             </div>{% endif %}
@@ -67,7 +66,7 @@
                         <a href="{{ page.permalink }}">{{ page.title }}</a>
                     </div>
                     <div class="post-excerpt">
-                        {{ page.date | date(format="%Y-%m-%d") }}
+                        {% if page.extra.journal %}{{ page.extra.journal }}, {{ page.date | date(format="%b, %Y") }}{% else %}{{ page.date | date(format="%Y-%m-%d") }}{% endif %}
                         {% if page.description %} | {{ page.description }}{% endif %}
                     </div>
                 </li>
