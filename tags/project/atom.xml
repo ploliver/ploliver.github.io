@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Pau López Oliver - project</title>
+    <subtitle>Figure 1: I am a physicist working on quantum field theory in curved spacetimes. Here, you will find (potentially) cool stuff I have done, both academic and non-academic.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://ploliver.github.io/tags/project/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ploliver.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    <id>https://ploliver.github.io/tags/project/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Bachelor&#x27;s Thesis</title>
+        <published>2024-07-20T00:00:00+00:00</published>
+        <updated>2024-07-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ploliver.github.io/posts/tfg/"/>
+        <id>https://ploliver.github.io/posts/tfg/</id>
+        
+        <content type="html" xml:base="https://ploliver.github.io/posts/tfg/">&lt;p&gt;The goal of this post is to explain the topic of my &lt;a href=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;tfg&#x2F;tfg_plo_ndo.pdf&quot;&gt;Bachelor&#x27;s thesis&lt;&#x2F;a&gt;. In a single sentence, it reformulates classical electromagnetism in purely geometric terms. This work, albeit bibliographical, sparked my interest in the interplay between geometry, field theories, and gravity. I also crafted some figures which — I think — deserved to be shared.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;tfg&#x2F;actuacion_hodge.svg&quot; alt=&quot;Sketch of the Hodge star operator acting on a 1-manifold in a 3-dimensional space&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;&#x2F;h2&gt;
+&lt;p&gt;The intention for this work arose from trying to reconcile two opposing ideas: that electromagnetism is a valid theory in the regime of special relativity, and that any energy curves spacetime. Throughout the degree, one only briefly mentions that a covariant formulation of Maxwell&#x27;s equations exists, but there was no physical motivation whatsoever.&lt;&#x2F;p&gt;
+&lt;p&gt;Reading bibliography, I came across texts more typical of theoretical physics, and the work evolved into a much more mathematical cut, where the final purpose was to talk about electromagnetism in curved spacetimes in the most natural way possible: differential forms on a 4-dimensional Lorentzian manifold \(\mathcal{M}\) that describes our spacetime.&lt;&#x2F;p&gt;
+&lt;p&gt;Before the 20th century, gravity and electromagnetism were both described by classical field theories on \(\mathbb{R}^3\). Maxwell&#x27;s equations govern the electric and magnetic fields \(\vec{E}\) and \(\vec{B}\), while Newtonian gravity is governed by a gravitational field \(\vec{g}\). However, Newtonian gravity has a limited validity: it does not predict phenomena such as the perihelion precession of Mercury or gravitational lensing, which are correctly described by general relativity. Moreover, classical electromagnetism is formulated within special relativity, which is incompatible with gravity. Any electromagnetic field carries energy, and energy curves spacetime. Therefore, a consistent theory must describe both electromagnetism and gravity on the same footing.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-geometric-toolbox&quot;&gt;The geometric toolbox&lt;&#x2F;h2&gt;
+&lt;p&gt;To reformulate electromagnetism in a way that naturally fits into general relativity, the thesis introduces the exterior calculus on differential manifolds. The key objects are:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;Lorentzian manifold&lt;&#x2F;strong&gt; \((\mathcal{M}, g)\), which models spacetime.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Differential forms&lt;&#x2F;strong&gt;, which generalise scalar, vector and tensor fields to antisymmetric objects of any rank.&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;strong&gt;exterior derivative&lt;&#x2F;strong&gt; \(\mathrm{d}\), which generalises the gradient, curl and divergence.&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;strong&gt;Hodge star&lt;&#x2F;strong&gt; \(\star\), which maps a \(k\)-form to an \((n-k)\)-form and depends on the metric.&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;strong&gt;codifferential&lt;&#x2F;strong&gt; \(\mathrm{d}^\dagger\), the adjoint of \(\mathrm{d}\) with respect to the inner product of forms.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;These tools are inherently geometric and allow one to write equations that are valid on any curved spacetime, not just flat Minkowski space.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-electromagnetic-lagrangian-as-a-differential-form&quot;&gt;The electromagnetic Lagrangian as a differential form&lt;&#x2F;h2&gt;
+&lt;p&gt;In analogy with the classical electromagnetic Lagrangian, one can propose a Lagrangian that depends on the field 1-form \(A = A_{\mu} \mathrm{d}x^{\mu}\), the source 1-form \(J = J_{\mu} \mathrm{d}x^{\mu}\), and the Faraday 2-form \(F = \mathrm{d}A\). In tensor notation the classical Lagrangian is
+$$
+\mathcal{L}_{EM} = - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} - J^{\mu} A_{\mu}.
+$$
+Using the Hodge star, this can be rewritten as a 4-form Lagrangian that naturally couples to the geometry:
+$$
+\mathcal{L}_{EM-G} = -\frac{1}{2} F \wedge \star F - A \wedge \star J.
+$$
+Remarkably, this expression depends on the metric \(g_{\mu \nu}\) only through the Hodge star operator \(\star\), so the coupling between electromagnetism and gravity is encoded geometrically.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;deriving-maxwell-s-equations&quot;&gt;Deriving Maxwell&#x27;s equations&lt;&#x2F;h2&gt;
+&lt;p&gt;Applying Hamilton&#x27;s principle to the action, i.e.,
+$$
+S = \int_{\mathcal{M}} \mathcal{L}_{EM-G}
+$$
+means considering a perturbation \(A&#x27; = A + \delta A\) of the potential 1-form, with \(\delta A = 0\) on the boundary \(\partial \mathcal{M}\). The perturbed Faraday 2-form is \(F&#x27; = F + \delta F\), where \(\delta F = \mathrm{d} \delta A\):&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;tfg&#x2F;hamilton_A.svg&quot; alt=&quot;Hamilton&amp;#39;s principle: unperturbed and perturbed 1-form Faraday on a 2-subvariety of spacetime&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Demanding that the variation \(\delta S\) vanish for arbitrary perturbations yields the &lt;strong&gt;inhomogeneous Maxwell equation&lt;&#x2F;strong&gt;,
+$$
+\mathrm{d} \star F = \star J.
+$$
+The &lt;strong&gt;homogeneous Maxwell equation&lt;&#x2F;strong&gt; follows directly from the definition of \(F\) and the nilpotency of the exterior derivative, \(\mathrm{d}^2 = 0\), yielding
+$$
+\mathrm{d} F = 0.
+$$
+In the language of forms, the homogeneous equation has no physical content of its own — it is a consequence of having formulated the theory in terms of a 4-potential \(A\). The inhomogeneous equation, however, depends on the metric via \(\star\), so it tells us how the geometry affects electromagnetism.&lt;&#x2F;p&gt;
+&lt;p&gt;To visualise what these equations mean geometrically, consider a point charge \(q\) at the origin in flat spacetime. The potential 1-form is \(A = q r^{-1} \mathrm{d}t\), so the Faraday 2-form and its Hodge dual are
+$$
+F = \frac{q}{r^{2}} \mathrm{d} t \wedge \mathrm{d} r, \qquad \star F = q \sin(\theta)   \mathrm{d} \theta \wedge \mathrm{d} \phi.
+$$
+The Faraday tubes have no end (homogeneous equation), while the dual tubes end where the charge sits (inhomogeneous equation):&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;tfg&#x2F;point_charge_forms.svg&quot; alt=&quot;Faraday and dual Faraday forms for a point charge&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;coupling-to-gravity-einstein-maxwell&quot;&gt;Coupling to gravity: Einstein-Maxwell&lt;&#x2F;h2&gt;
+&lt;p&gt;To complete the picture, one considers the combined electrogravitational Lagrangian
+$$
+\mathcal{L}_{EG} = \frac{1}{2\kappa} R   \mathrm{dv}_4 - \frac{1}{2} F \wedge \star F - A \wedge \star J,
+$$
+where \(R\) is the Ricci scalar and \(\mathrm{dv}_4\) is the volume form. Varying this action with respect to the metric \(g^{\mu \nu}\) leads to the Einstein field equations with an electromagnetic energy-momentum tensor:
+$$
+R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} = \kappa T_{\mu \nu}.
+$$
+The tensor \(T_{\mu \nu}\) is derived from the electromagnetic Lagrangian and encodes how the electromagnetic field acts as a source for gravity.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-classical-limit&quot;&gt;The classical limit&lt;&#x2F;h2&gt;
+&lt;p&gt;A crucial check is that the new formulation reduces to the familiar Maxwell equations in flat spacetime. Taking the metric to be Minkowski, \(\eta_{\mu \nu} = \mathrm{diag}(-1, 1, 1, 1)\), and writing the potential 1-form as \(A = -\phi   \mathrm{d}t + A_x   \mathrm{d}x + A_y   \mathrm{d}y + A_z   \mathrm{d}z\), the Faraday 2-form becomes
+$$
+F = -E_x   \mathrm{d}t \wedge \mathrm{d}x - E_y   \mathrm{d}t \wedge \mathrm{d}y - E_z   \mathrm{d}t \wedge \mathrm{d}z + B_z   \mathrm{d}x \wedge \mathrm{d}y - B_y   \mathrm{d}x \wedge \mathrm{d}z + B_x   \mathrm{d}y \wedge \mathrm{d}z.
+$$
+Applying \(\mathrm{d}F = 0\) and \(\mathrm{d}\star F = \star J\) then reproduces the four classical Maxwell equations in vector notation. This confirms that the geometric formulation is a genuine generalisation, not a replacement, of the standard theory. This also serves as a consistency check, since the minkowski metric will only happen when all fields are identically zero!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;&#x2F;h2&gt;
+&lt;p&gt;The formalism described does not capture the full physical reality, because it ignores the quantum nature of electromagnetic radiation. Nevertheless, it provides a consistent joint description of classical electromagnetism and gravity. A particularly simple solution to the Einstein-Maxwell equations is the Reissner-Nordström metric, which describes a charged, non-rotating body. More complex solutions such as Kerr-Newman describe charged rotating black holes.&lt;&#x2F;p&gt;
+&lt;p&gt;Beyond its immediate physical application, the differential-form description of electromagnetism is a natural stepping stone to more advanced field theories that are usually expressed in the same geometric language. In the words of Misner, Thorne and Wheeler, &lt;em&gt;differential forms illuminate electromagnetism, and electromagnetism illuminates differential forms&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Walking Every F&amp;!*ing Street in Elda</title>
+        <published>2024-07-08T00:00:00+00:00</published>
+        <updated>2024-07-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ploliver.github.io/posts/recorriendo-toda-puta-elda/"/>
+        <id>https://ploliver.github.io/posts/recorriendo-toda-puta-elda/</id>
+        
+        <content type="html" xml:base="https://ploliver.github.io/posts/recorriendo-toda-puta-elda/">&lt;p&gt;Together with my dear friend &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;abeldonate.com&#x2F;&quot;&gt;Abel&lt;&#x2F;a&gt;, I&#x27;m walking every street in our town. Why would anyone want to walk every single street in their town? No idea. The thing is, every time we meet up, we talk about our lives while trying to figure out the route that maximizes the number of streets walked per step taken. Afterwards, we make a &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;abeldonate&#x2F;walking-trackmap&#x2F;blob&#x2F;main&#x2F;resultingmap.html&quot;&gt;&lt;strong&gt;map&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; to keep track of our progress.&lt;&#x2F;p&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;raw.githack.com&#x2F;abeldonate&#x2F;walking-trackmap&#x2F;main&#x2F;resultingmap.html&quot; width=&quot;100%&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc; border-radius: 4px; margin: 1em 0;&quot;&gt;&lt;&#x2F;iframe&gt;
+&lt;h2 id=&quot;the-rules&quot;&gt;The Rules&lt;&#x2F;h2&gt;
+&lt;p&gt;The &lt;em&gt;rules of the game&lt;&#x2F;em&gt; are simple. We always meet at the same spot, and we start walking. Every street, avenue, road, etc. must be walked — that is, anything with a name. Private properties don&#x27;t count even if they have roads, for now. Also, we must walk the &lt;strong&gt;entire length&lt;&#x2F;strong&gt; of the street, not just &lt;em&gt;touch&lt;&#x2F;em&gt; it.&lt;&#x2F;p&gt;
+&lt;p&gt;These rules are more permissive than those in &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=1c8i5SABqwU&quot;&gt;Tom Murphy VII&#x27;s wonderful video&lt;&#x2F;a&gt;, where he always starts from the same spot, goes running, and more. Highly recommend the video, which neither Abel nor I had seen before starting this!&lt;&#x2F;p&gt;
+&lt;p&gt;There remains a can of worms unopened: what is the actual extent of Elda (and Petrer)? As it turns out, legally speaking &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;es.wikipedia.org&#x2F;wiki&#x2F;Elda#&#x2F;map&#x2F;0&quot;&gt;Elda is actually quite big&lt;&#x2F;a&gt; and &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;es.wikipedia.org&#x2F;wiki&#x2F;Petrer#&#x2F;map&#x2F;0&quot;&gt;Petrer is even bigger&lt;&#x2F;a&gt;. Will we ever run the length of our hometown? I honestly do not know, but we will hopefully try our hardest for years to come.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tracking-technology&quot;&gt;Tracking technology&lt;&#x2F;h2&gt;
+&lt;p&gt;Every time we meet, we track the walk with the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.strava.com&#x2F;&quot;&gt;Strava&lt;&#x2F;a&gt; app to log our GPS position at all times. Once the walk is done, we download the data onto a computer and feed it into a &lt;code&gt;Python&lt;&#x2F;code&gt; script that uses the &lt;code&gt;OpenStreetMap&lt;&#x2F;code&gt; library to generate an &lt;code&gt;html&lt;&#x2F;code&gt; file that renders the map. For more details, check out the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;abeldonate&#x2F;walking-trackmap&quot;&gt;GitHub repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How to calculate Planck&#x27;s constant at home</title>
+        <published>2023-02-09T00:00:00+00:00</published>
+        <updated>2023-02-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ploliver.github.io/posts/calculo-h/"/>
+        <id>https://ploliver.github.io/posts/calculo-h/</id>
+        
+        <content type="html" xml:base="https://ploliver.github.io/posts/calculo-h/">&lt;p&gt;In 1900, Planck postulated a fundamental result of quantum physics: electromagnetic radiation energy is quantised and follows the expression&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+E_{f} = h \nu
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;where \(E_f\) is the photon energy, \(h\) is Planck&#x27;s constant, and \(\nu\) is the frequency of the light. We also know that an LED consists of a &lt;em&gt;p-n junction&lt;&#x2F;em&gt;, i.e., the union of two semiconductor materials: a &quot;p&quot; (positive) one with &lt;em&gt;holes&lt;&#x2F;em&gt; for electrons, and an &quot;n&quot; (negative) one with an excess of electrons. This means electric current can only flow in one direction, from positive to negative. At rest, electrons do not cross the p-n junction because they need a minimum energy to do so. In other words, there is a potential barrier. If we connect the diode to a sufficiently strong electric potential, this barrier will be overcome. We will call this potential the &lt;em&gt;threshold voltage&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Electrons reaching the positive semiconductor will fill the available holes. However, these holes have lower energy levels than the electrons. The &lt;em&gt;surplus&lt;&#x2F;em&gt; energy of the electrons is emitted as electromagnetic radiation (photons) and heat. If we go above the threshold voltage, more electrons will cross (more current), but the energy released per electron does not change.&lt;&#x2F;p&gt;
+&lt;p&gt;We will assume the emitted heat is negligible, so the energy of the photon emitted by an electron is entirely the electric energy of the threshold voltage:
+$$
+E_f = e \mathbb{V}_u,
+$$
+where \(e\) is the electron charge and \(\mathbb{V}_u\) is the minimum potential difference between the LED&#x27;s cathode and anode at which light begins to be emitted — our threshold voltage. Combining Planck&#x27;s law, the derived equation, and \(\nu = c &#x2F; \lambda\), we arrive at
+$$
+\mathbb{V}_u = \frac{hc}{e} \frac{1}{\lambda}
+$$
+If we measure different values of \(\mathbb{V}_u\) for different values of \(\lambda\), we can do a linear fit \(V \sim 1&#x2F;\lambda\), from which we obtain a line with slope \(m\), which is precisely the quantity \(hc &#x2F; e\). Rearranging:
+$$
+h = m \frac{e}{c}
+$$&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;experimental-setup&quot;&gt;Experimental setup&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;calculo-h&#x2F;circuito.png&quot; alt=&quot;Circuit diagram&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The experimental setup carried out is an adaptation of the one described in the virtual lab (vlab.amrita.edu) in an attempt to reduce the amount of lab equipment needed. Specifically, we used an Arduino UNO, a &lt;em&gt;breadboard&lt;&#x2F;em&gt;, a 10 \(k \Omega\) potentiometer (or voltage divider), two resistors equivalent to a 67 \(k \Omega\) resistor, and a 4-pin RGB LED. The RGB LED is nothing more than three LED diodes — red, blue, and green — sharing a cathode. For our purposes, we will use the different-coloured diodes one at a time. The setup is as shown in the figure.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;calculo-h&#x2F;experimento.jpeg&quot; alt=&quot;Experimental setup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Let us dissect what we are doing using the diagram. First, the digital output \verb|D11| supplies 4.9 V. We connect this to the voltage divider, which splits our electric current in two. One of them we connect to ground (GND), completing the circuit, and the other to a resistor connected in series to our LED. The purpose of the resistor is to protect the LED. To finish the main part of the circuit, we connect the LED&#x27;s cathode to ground, completing the circuit.&lt;&#x2F;p&gt;
+&lt;p&gt;In this way, by turning the potentiometer we choose the potential difference to which we subject the diode, so we can stop right when we see the LED turn on: this will be our threshold voltage.&lt;&#x2F;p&gt;
+&lt;p&gt;For the second part of the circuit, we connect the Arduino&#x27;s analog pins \verb|A0| and \verb|A1| to the LED&#x27;s anode and cathode, respectively. We can read the &lt;em&gt;analog&lt;&#x2F;em&gt; voltage values on these pins. Specifically, reading these voltages returns an integer: 0 for 0 V and 1023 for 4.9 V. This allows us to use the same Arduino as a voltmeter, with a precision of 4.9&#x2F;1024 V. We program the Arduino to measure the potential difference between the LED&#x27;s anode and cathode, as can be seen in the project&#x27;s source code.&lt;&#x2F;p&gt;
+&lt;p&gt;To take measurements, we connect only one of the LED colours. In a dark environment, we turn the potentiometer until light starts to be emitted and we read the potential difference measured by the board on the computer screen. The collected data are as follows:&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;data-analysis&quot;&gt;Data analysis&lt;&#x2F;h1&gt;
+&lt;p&gt;We measured the turn-on voltage of the different coloured LEDs and obtained the wavelengths, \(\lambda\), from the manufacturer&#x27;s specifications. The exact data can be found in the &lt;a href=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;calculo-h&#x2F;plo-det2-determinacion_h.pdf&quot;&gt;full report&lt;&#x2F;a&gt;. We will take the arithmetic mean of the measured values for each colour as our data for the fit. From the linear fit, which we can see in the figure, we obtain a slope \(m = (1.2175 \pm 0.0058) \times 10^{-6}\) V m. Using the fit expression and the reference values of \(e\) and \(c\):&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;ploliver.github.io&#x2F;posts&#x2F;calculo-h&#x2F;lm.png&quot; alt=&quot;Linear fit&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+h = (6.506 \pm 0.031) \times 10^{-34} \ J \cdot s
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;This value has an error of 1.79% compared with the reference value, \(h = 6.62607015\times10^{-34} \ J \cdot s\).&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;&#x2F;h1&gt;
+&lt;p&gt;Overall, a couple of things can be noted from a recreational physics standpoint. Firstly, despite not needing the specialised lab equipment required for the experiment (rheostat, multimeter, etc.), not everyone has an Arduino board. Nonetheless, acquiring everything needed to reproduce the experiment is relatively cheap and accessible. Furthermore, using the board as a voltmeter is merely a &lt;em&gt;homemade&lt;&#x2F;em&gt; approximation with fairly low precision.&lt;&#x2F;p&gt;
+&lt;p&gt;Nevertheless, the result obtained is satisfactory and showcases the quantum behaviour of electrons and electromagnetic radiation.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

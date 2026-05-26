@@ -1,0 +1,223 @@
+/* Smooth dark mode transition */
+/* Smooth dark mode transition */
+body {
+    transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+img {
+    transition: filter 0.12s ease;
+}
+
+/* Posts list */
+.posts {
+    margin-left: 2.5em;
+}
+
+.posts .post {
+    text-indent: 0;
+}
+
+/* Posts search & tag filter */
+.post-search {
+    width: 100%;
+    padding: 0.3em 0;
+    margin: 0.5em 0 1.2em 0;
+    border: none;
+    border-bottom: 1px solid var(--bordercl);
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+    background: transparent;
+    color: inherit;
+    outline: none;
+}
+
+.post-search:focus {
+    border-bottom-color: var(--maincolor);
+}
+
+.tag-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.tag-label {
+    font-size: 0.8em;
+    color: grey;
+}
+
+.tag-chip {
+    padding: 0.15em 0.6em;
+    font-family: inherit;
+    font-size: 0.8em;
+    cursor: pointer;
+    background: transparent;
+    color: inherit;
+    border: none;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.3em;
+    transition: text-decoration-color 0.12s;
+}
+
+.tag-chip:hover {
+    text-decoration-color: var(--bordercl);
+}
+
+.tag-chip.active {
+    text-decoration-color: var(--maincolor);
+}
+
+.tag-cloud ul {
+    margin-left: 2.5em;
+}
+
+.tags li::before {
+    content: "🏷️";
+    margin-right: 0.3em;
+}
+
+.soc-icon {
+    height: 15px;
+    vertical-align: middle;
+}
+
+footer {
+    border-top: none;
+    padding-top: 1rem;
+}
+
+.footer-info {
+    margin-top: -0.15em;
+}
+
+/* Dark mode toggle */
+#dark-mode-toggle {
+    border-bottom: 1px solid transparent;
+}
+
+#dark-mode-toggle svg {
+    vertical-align: text-bottom;
+}
+
+/* Banner */
+header {
+    margin-top: 1.5em;
+}
+.site-banner {
+    margin-bottom: 1em;
+}
+
+.site-banner img {
+    width: 100%;
+    display: block;
+}
+
+.site-description p:first-child {
+    margin-top: 0;
+}
+
+/* Consistent page title spacing */
+h1 { margin-top: 1em; }
+h2 { margin-top: 2em; margin-bottom: 0.5em; font-weight: bold; }
+
+/* Home page publications */
+.home-pubs {
+    margin: 2em 0;
+}
+
+.home-pubs h2 {
+    margin-top: 0;
+}
+
+.home-pubs-all {
+    font-weight: normal;
+}
+
+/* Publications */
+.publications {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 2.5em;
+    margin-top: 2.5em;
+}
+
+.pub-item {
+    position: relative;
+    padding-left: 2.2em;
+    margin-bottom: 1.5em;
+    text-indent: 0;
+}
+
+.pub-item::before {
+    content: "\\";
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+}
+
+.pub-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.2em;
+}
+
+.pub-meta {
+    color: grey;
+    font-size: 0.95rem;
+}
+
+.pub-meta .self {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--maincolor);
+    text-underline-offset: 3px;
+}
+
+.pub-venue {
+    font-style: italic;
+    margin-top: 0.15em;
+}
+
+.post-excerpt {
+    color: grey;
+    margin-top: 0.15em;
+}
+
+.pub-badge {
+    font-style: normal;
+    font-size: 0.9em;
+}
+
+/* Tag links match regular link styling */
+.tags a {
+    border-bottom: 1px solid var(--maincolor);
+    color: inherit;
+}
+
+.tags a:hover {
+    border-bottom: 3px solid var(--maincolor);
+    color: #000000;
+    background-color: transparent;
+}
+
+/* Post meta (published by, date) in gray */
+.meta {
+    color: grey;
+    margin-top: -0.8em;
+    margin-bottom: 2em;
+}
+
+/* Reset KaTeX to match text colour */
+article span {
+    color: inherit !important;
+}
+
+.katex {
+    font-size: 1.1em;
+}
+.katex-display .katex {
+    font-size: 1.2em;
+}

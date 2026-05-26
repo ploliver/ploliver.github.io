@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Pau López Oliver - misc</title>
+    <subtitle>Figure 1: I am a physicist working on quantum field theory in curved spacetimes. Here, you will find (potentially) cool stuff I have done, both academic and non-academic.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://ploliver.github.io/tags/misc/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ploliver.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-08T00:00:00+00:00</updated>
+    <id>https://ploliver.github.io/tags/misc/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Walking Every F&amp;!*ing Street in Elda</title>
+        <published>2024-07-08T00:00:00+00:00</published>
+        <updated>2024-07-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ploliver.github.io/posts/recorriendo-toda-puta-elda/"/>
+        <id>https://ploliver.github.io/posts/recorriendo-toda-puta-elda/</id>
+        
+        <content type="html" xml:base="https://ploliver.github.io/posts/recorriendo-toda-puta-elda/">&lt;p&gt;Together with my dear friend &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;abeldonate.com&#x2F;&quot;&gt;Abel&lt;&#x2F;a&gt;, I&#x27;m walking every street in our town. Why would anyone want to walk every single street in their town? No idea. The thing is, every time we meet up, we talk about our lives while trying to figure out the route that maximizes the number of streets walked per step taken. Afterwards, we make a &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;abeldonate&#x2F;walking-trackmap&#x2F;blob&#x2F;main&#x2F;resultingmap.html&quot;&gt;&lt;strong&gt;map&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; to keep track of our progress.&lt;&#x2F;p&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;raw.githack.com&#x2F;abeldonate&#x2F;walking-trackmap&#x2F;main&#x2F;resultingmap.html&quot; width=&quot;100%&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc; border-radius: 4px; margin: 1em 0;&quot;&gt;&lt;&#x2F;iframe&gt;
+&lt;h2 id=&quot;the-rules&quot;&gt;The Rules&lt;&#x2F;h2&gt;
+&lt;p&gt;The &lt;em&gt;rules of the game&lt;&#x2F;em&gt; are simple. We always meet at the same spot, and we start walking. Every street, avenue, road, etc. must be walked — that is, anything with a name. Private properties don&#x27;t count even if they have roads, for now. Also, we must walk the &lt;strong&gt;entire length&lt;&#x2F;strong&gt; of the street, not just &lt;em&gt;touch&lt;&#x2F;em&gt; it.&lt;&#x2F;p&gt;
+&lt;p&gt;These rules are more permissive than those in &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=1c8i5SABqwU&quot;&gt;Tom Murphy VII&#x27;s wonderful video&lt;&#x2F;a&gt;, where he always starts from the same spot, goes running, and more. Highly recommend the video, which neither Abel nor I had seen before starting this!&lt;&#x2F;p&gt;
+&lt;p&gt;There remains a can of worms unopened: what is the actual extent of Elda (and Petrer)? As it turns out, legally speaking &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;es.wikipedia.org&#x2F;wiki&#x2F;Elda#&#x2F;map&#x2F;0&quot;&gt;Elda is actually quite big&lt;&#x2F;a&gt; and &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;es.wikipedia.org&#x2F;wiki&#x2F;Petrer#&#x2F;map&#x2F;0&quot;&gt;Petrer is even bigger&lt;&#x2F;a&gt;. Will we ever run the length of our hometown? I honestly do not know, but we will hopefully try our hardest for years to come.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tracking-technology&quot;&gt;Tracking technology&lt;&#x2F;h2&gt;
+&lt;p&gt;Every time we meet, we track the walk with the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.strava.com&#x2F;&quot;&gt;Strava&lt;&#x2F;a&gt; app to log our GPS position at all times. Once the walk is done, we download the data onto a computer and feed it into a &lt;code&gt;Python&lt;&#x2F;code&gt; script that uses the &lt;code&gt;OpenStreetMap&lt;&#x2F;code&gt; library to generate an &lt;code&gt;html&lt;&#x2F;code&gt; file that renders the map. For more details, check out the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;abeldonate&#x2F;walking-trackmap&quot;&gt;GitHub repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

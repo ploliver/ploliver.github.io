@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    
+        <title>
+             Bachelor&#x27;s Thesis
+            
+        </title>
+
+        
+            <meta property="og:title" content="Bachelor&#x27;s Thesis" />
+        
+    
+
+    
+        
+            <meta property="og:description" content="Brief summary of my Bachelor&#x27;s thesis." />
+        
+    
+
+    
+        
+            <meta name="description" content="Brief summary of my Bachelor&#x27;s thesis." />
+        
+    
+
+    
+         <link rel="icon" type="image/png" href=&#x2F;icon&#x2F;favicon32.png />
+    
+
+    
+
+    
+
+    
+    
+        <script src=https://ploliver.github.io/js/feather.min.js></script>
+    
+
+
+    
+        <link href=https://ploliver.github.io/css/fonts.css rel="stylesheet" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://ploliver.github.io/css/main.css />
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}, {left: '$', right: '$', display: false}]});"></script>
+    
+
+    <link rel="stylesheet" type="text/css" href="/giallo-light.css" />
+    <link rel="stylesheet" type="text/css" href="/giallo-dark.css" id="gialloDarkStyle" disabled />
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://ploliver.github.io/css/custom.css />
+
+    
+        <link
+            rel="stylesheet"
+            id="darkModeStyle"
+            type="text/css"
+            href=https://ploliver.github.io/css/dark.css
+            
+            
+                disabled
+            
+        />
+    
+
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main" id="main_title">
+        <a href=https:&#x2F;&#x2F;ploliver.github.io>Pau López Oliver</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;>Home</a>
+        
+            <a href=&#x2F;posts>Posts</a>
+        
+            <a href=&#x2F;about>About</a>
+        
+            <a href=&#x2F;publications>Publications</a>
+        
+
+        
+            | <a id="dark-mode-toggle" onclick="toggleTheme();return false" href="#">  
+                <i data-feather="sun" id="dark-sun"></i>
+                <i data-feather="moon" id="dark-moon" style="display:none"></i>
+            </a>
+            <script src=https://ploliver.github.io/js/themetoggle.js></script>
+        
+    </nav>
+</header>
+
+
+        
+    
+<main>
+    <article>
+        <div class="title">
+            <h1 class="title">Bachelor&#x27;s Thesis</h1>
+            <div class="meta">
+                
+                    Published by <a href="http:&#x2F;&#x2F;twitter.com&#x2F;" target="_blank">Pau</a>
+                
+                on  2024-07-20
+
+                
+            </div>
+        </div>
+
+        
+
+        <section class="body">
+            <p>The goal of this post is to explain the topic of my <a href="https://ploliver.github.io/posts/tfg/tfg_plo_ndo.pdf">Bachelor's thesis</a>. In a single sentence, it reformulates classical electromagnetism in purely geometric terms. This work, albeit bibliographical, sparked my interest in the interplay between geometry, field theories, and gravity. I also crafted some figures which — I think — deserved to be shared.</p>
+<p><img src="https://ploliver.github.io/posts/tfg/actuacion_hodge.svg" alt="Sketch of the Hodge star operator acting on a 1-manifold in a 3-dimensional space" /></p>
+<h2 id="motivation">Motivation</h2>
+<p>The intention for this work arose from trying to reconcile two opposing ideas: that electromagnetism is a valid theory in the regime of special relativity, and that any energy curves spacetime. Throughout the degree, one only briefly mentions that a covariant formulation of Maxwell's equations exists, but there was no physical motivation whatsoever.</p>
+<p>Reading bibliography, I came across texts more typical of theoretical physics, and the work evolved into a much more mathematical cut, where the final purpose was to talk about electromagnetism in curved spacetimes in the most natural way possible: differential forms on a 4-dimensional Lorentzian manifold \(\mathcal{M}\) that describes our spacetime.</p>
+<p>Before the 20th century, gravity and electromagnetism were both described by classical field theories on \(\mathbb{R}^3\). Maxwell's equations govern the electric and magnetic fields \(\vec{E}\) and \(\vec{B}\), while Newtonian gravity is governed by a gravitational field \(\vec{g}\). However, Newtonian gravity has a limited validity: it does not predict phenomena such as the perihelion precession of Mercury or gravitational lensing, which are correctly described by general relativity. Moreover, classical electromagnetism is formulated within special relativity, which is incompatible with gravity. Any electromagnetic field carries energy, and energy curves spacetime. Therefore, a consistent theory must describe both electromagnetism and gravity on the same footing.</p>
+<h2 id="the-geometric-toolbox">The geometric toolbox</h2>
+<p>To reformulate electromagnetism in a way that naturally fits into general relativity, the thesis introduces the exterior calculus on differential manifolds. The key objects are:</p>
+<ul>
+<li>A <strong>Lorentzian manifold</strong> \((\mathcal{M}, g)\), which models spacetime.</li>
+<li><strong>Differential forms</strong>, which generalise scalar, vector and tensor fields to antisymmetric objects of any rank.</li>
+<li>The <strong>exterior derivative</strong> \(\mathrm{d}\), which generalises the gradient, curl and divergence.</li>
+<li>The <strong>Hodge star</strong> \(\star\), which maps a \(k\)-form to an \((n-k)\)-form and depends on the metric.</li>
+<li>The <strong>codifferential</strong> \(\mathrm{d}^\dagger\), the adjoint of \(\mathrm{d}\) with respect to the inner product of forms.</li>
+</ul>
+<p>These tools are inherently geometric and allow one to write equations that are valid on any curved spacetime, not just flat Minkowski space.</p>
+<h2 id="the-electromagnetic-lagrangian-as-a-differential-form">The electromagnetic Lagrangian as a differential form</h2>
+<p>In analogy with the classical electromagnetic Lagrangian, one can propose a Lagrangian that depends on the field 1-form \(A = A_{\mu} \mathrm{d}x^{\mu}\), the source 1-form \(J = J_{\mu} \mathrm{d}x^{\mu}\), and the Faraday 2-form \(F = \mathrm{d}A\). In tensor notation the classical Lagrangian is
+$$
+\mathcal{L}_{EM} = - \frac{1}{4} F_{\mu \nu} F^{\mu \nu} - J^{\mu} A_{\mu}.
+$$
+Using the Hodge star, this can be rewritten as a 4-form Lagrangian that naturally couples to the geometry:
+$$
+\mathcal{L}_{EM-G} = -\frac{1}{2} F \wedge \star F - A \wedge \star J.
+$$
+Remarkably, this expression depends on the metric \(g_{\mu \nu}\) only through the Hodge star operator \(\star\), so the coupling between electromagnetism and gravity is encoded geometrically.</p>
+<h2 id="deriving-maxwell-s-equations">Deriving Maxwell's equations</h2>
+<p>Applying Hamilton's principle to the action, i.e.,
+$$
+S = \int_{\mathcal{M}} \mathcal{L}_{EM-G}
+$$
+means considering a perturbation \(A' = A + \delta A\) of the potential 1-form, with \(\delta A = 0\) on the boundary \(\partial \mathcal{M}\). The perturbed Faraday 2-form is \(F' = F + \delta F\), where \(\delta F = \mathrm{d} \delta A\):</p>
+<p><img src="https://ploliver.github.io/posts/tfg/hamilton_A.svg" alt="Hamilton&#39;s principle: unperturbed and perturbed 1-form Faraday on a 2-subvariety of spacetime" /></p>
+<p>Demanding that the variation \(\delta S\) vanish for arbitrary perturbations yields the <strong>inhomogeneous Maxwell equation</strong>,
+$$
+\mathrm{d} \star F = \star J.
+$$
+The <strong>homogeneous Maxwell equation</strong> follows directly from the definition of \(F\) and the nilpotency of the exterior derivative, \(\mathrm{d}^2 = 0\), yielding
+$$
+\mathrm{d} F = 0.
+$$
+In the language of forms, the homogeneous equation has no physical content of its own — it is a consequence of having formulated the theory in terms of a 4-potential \(A\). The inhomogeneous equation, however, depends on the metric via \(\star\), so it tells us how the geometry affects electromagnetism.</p>
+<p>To visualise what these equations mean geometrically, consider a point charge \(q\) at the origin in flat spacetime. The potential 1-form is \(A = q r^{-1} \mathrm{d}t\), so the Faraday 2-form and its Hodge dual are
+$$
+F = \frac{q}{r^{2}} \mathrm{d} t \wedge \mathrm{d} r, \qquad \star F = q \sin(\theta)   \mathrm{d} \theta \wedge \mathrm{d} \phi.
+$$
+The Faraday tubes have no end (homogeneous equation), while the dual tubes end where the charge sits (inhomogeneous equation):</p>
+<p><img src="https://ploliver.github.io/posts/tfg/point_charge_forms.svg" alt="Faraday and dual Faraday forms for a point charge" /></p>
+<h2 id="coupling-to-gravity-einstein-maxwell">Coupling to gravity: Einstein-Maxwell</h2>
+<p>To complete the picture, one considers the combined electrogravitational Lagrangian
+$$
+\mathcal{L}_{EG} = \frac{1}{2\kappa} R   \mathrm{dv}_4 - \frac{1}{2} F \wedge \star F - A \wedge \star J,
+$$
+where \(R\) is the Ricci scalar and \(\mathrm{dv}_4\) is the volume form. Varying this action with respect to the metric \(g^{\mu \nu}\) leads to the Einstein field equations with an electromagnetic energy-momentum tensor:
+$$
+R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} = \kappa T_{\mu \nu}.
+$$
+The tensor \(T_{\mu \nu}\) is derived from the electromagnetic Lagrangian and encodes how the electromagnetic field acts as a source for gravity.</p>
+<h2 id="the-classical-limit">The classical limit</h2>
+<p>A crucial check is that the new formulation reduces to the familiar Maxwell equations in flat spacetime. Taking the metric to be Minkowski, \(\eta_{\mu \nu} = \mathrm{diag}(-1, 1, 1, 1)\), and writing the potential 1-form as \(A = -\phi   \mathrm{d}t + A_x   \mathrm{d}x + A_y   \mathrm{d}y + A_z   \mathrm{d}z\), the Faraday 2-form becomes
+$$
+F = -E_x   \mathrm{d}t \wedge \mathrm{d}x - E_y   \mathrm{d}t \wedge \mathrm{d}y - E_z   \mathrm{d}t \wedge \mathrm{d}z + B_z   \mathrm{d}x \wedge \mathrm{d}y - B_y   \mathrm{d}x \wedge \mathrm{d}z + B_x   \mathrm{d}y \wedge \mathrm{d}z.
+$$
+Applying \(\mathrm{d}F = 0\) and \(\mathrm{d}\star F = \star J\) then reproduces the four classical Maxwell equations in vector notation. This confirms that the geometric formulation is a genuine generalisation, not a replacement, of the standard theory. This also serves as a consistency check, since the minkowski metric will only happen when all fields are identically zero!</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>The formalism described does not capture the full physical reality, because it ignores the quantum nature of electromagnetic radiation. Nevertheless, it provides a consistent joint description of classical electromagnetism and gravity. A particularly simple solution to the Einstein-Maxwell equations is the Reissner-Nordström metric, which describes a charged, non-rotating body. More complex solutions such as Kerr-Newman describe charged rotating black holes.</p>
+<p>Beyond its immediate physical application, the differential-form description of electromagnetism is a natural stepping stone to more advanced field theories that are usually expressed in the same geometric language. In the words of Misner, Thorne and Wheeler, <em>differential forms illuminate electromagnetism, and electromagnetism illuminates differential forms</em>.</p>
+
+        </section>
+
+        
+            <div class="post-tags tags" style="text-align: left;">
+                <img src="/imgs/manicule.svg" class="soc-icon" style="height:0.6em; display:inline; margin:0; vertical-align: -0.1em;" alt="Tags">&nbsp;
+                
+                    <a href=https://ploliver.github.io/tags/physics/>physics</a>, 
+                
+                    <a href=https://ploliver.github.io/tags/project/>project</a>
+                
+            </div>
+        
+
+    </article>
+</main>
+
+
+
+        <footer>
+  <div style="display:flex">
+    
+        <a class="soc" href=https:&#x2F;&#x2F;github.com&#x2F;ploliver title=GitHub>
+            
+                <i data-feather=github></i>
+            
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;orcid.org&#x2F;0009-0009-0037-9739 title=ORCID>
+            
+                <img src="/imgs/orcid.svg" class="soc-icon" alt="ORCID">
+            
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?hl=en&amp;user=MmwkWZ8AAAAJ title=Google Scholar>
+            
+                <img src="/imgs/googlescholar.svg" class="soc-icon" alt="Google Scholar">
+            
+        </a>
+    
+    <span class="soc" style="color:inherit;">
+        <img src="/imgs/correus.svg" class="soc-icon" alt="Email" style="height:auto; width:19.5rem;">
+    </span>
+  </div>
+  <div class="footer-info">
+    2026 © pau
+  </div>
+</footer>
+
+
+<script>
+    feather.replace();
+</script>
+
+
+    </div>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e7e88a248ebd4bf0bcbee9c3c758da68"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+
+</html>
